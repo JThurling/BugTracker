@@ -422,7 +422,6 @@ C:\Code\Blazor\BugTracker\Client\obj\Debug\net5.0\RazorDeclaration\Shared\Redire
 C:\Code\Blazor\BugTracker\Client\obj\Debug\net5.0\RazorDeclaration\Shared\SurveyPrompt.razor.g.cs
 C:\Code\Blazor\BugTracker\Client\obj\Debug\net5.0\RazorDeclaration\_Imports.razor.g.cs
 C:\Code\Blazor\BugTracker\Client\obj\Debug\net5.0\RazorDeclaration\Shared\MainLayout.razor.g.cs
-C:\Code\Blazor\BugTracker\Client\obj\Debug\net5.0\RazorDeclaration\Shared\NavMenu.razor.g.cs
 C:\Code\Blazor\BugTracker\Client\obj\Debug\net5.0\BugTracker.Client.RazorComponent.output.cache
 C:\Code\Blazor\BugTracker\Client\obj\Debug\net5.0\RazorDeclaration\BugTracker.Client.dll
 C:\Code\Blazor\BugTracker\Client\obj\Debug\net5.0\BugTracker.Client.TagHelpers.input.cache
@@ -438,7 +437,6 @@ C:\Code\Blazor\BugTracker\Client\obj\Debug\net5.0\Razor\Shared\RedirectToLogin.r
 C:\Code\Blazor\BugTracker\Client\obj\Debug\net5.0\Razor\Shared\SurveyPrompt.razor.g.cs
 C:\Code\Blazor\BugTracker\Client\obj\Debug\net5.0\Razor\_Imports.razor.g.cs
 C:\Code\Blazor\BugTracker\Client\obj\Debug\net5.0\Razor\Shared\MainLayout.razor.g.cs
-C:\Code\Blazor\BugTracker\Client\obj\Debug\net5.0\Razor\Shared\NavMenu.razor.g.cs
 C:\Code\Blazor\BugTracker\Client\obj\Debug\net5.0\build-gz\3Bb9uJXF.gz
 C:\Code\Blazor\BugTracker\Client\obj\Debug\net5.0\build-gz\YeDVw9ph.gz
 C:\Code\Blazor\BugTracker\Client\obj\Debug\net5.0\build-gz\5ThHWxXL.gz
@@ -641,7 +639,6 @@ C:\Code\Blazor\BugTracker\Client\obj\Debug\net5.0\build-gz\eNiK6UsC.gz
 C:\Code\Blazor\BugTracker\Client\obj\Debug\net5.0\staticwebassets\BugTracker.Client.StaticWebAssets.Manifest.cache
 C:\Code\Blazor\BugTracker\Client\obj\Debug\net5.0\staticwebassets\BugTracker.Client.StaticWebAssets.xml
 C:\Code\Blazor\BugTracker\Client\obj\Debug\net5.0\scopedcss\Shared\MainLayout.razor.rz.scp.css
-C:\Code\Blazor\BugTracker\Client\obj\Debug\net5.0\scopedcss\Shared\NavMenu.razor.rz.scp.css
 C:\Code\Blazor\BugTracker\Client\obj\Debug\net5.0\scopedcss\bundle\BugTracker.Client.styles.css
 C:\Code\Blazor\BugTracker\Client\obj\Debug\net5.0\scopedcss\projectbundle\BugTracker.Client.bundle.scp.css
 C:\Code\Blazor\BugTracker\Client\obj\Debug\net5.0\BugTracker.Client.RazorTargetAssemblyInfo.cache
@@ -652,3 +649,12 @@ C:\Code\Blazor\BugTracker\Client\obj\Debug\net5.0\BugTracker.Client.pdb
 C:\Code\Blazor\BugTracker\Client\bin\Debug\net5.0\wwwroot\_framework\Serilog.dll.gz
 C:\Code\Blazor\BugTracker\Client\bin\Debug\net5.0\wwwroot\_framework\Serilog.dll
 C:\Code\Blazor\BugTracker\Client\obj\Debug\net5.0\build-gz\qAAZYsYB.gz
+C:\Code\Blazor\BugTracker\Client\bin\Debug\net5.0\wwwroot\_framework\AntDesign.dll.gz
+C:\Code\Blazor\BugTracker\Client\bin\Debug\net5.0\wwwroot\_framework\Microsoft.AspNetCore.Components.DataAnnotations.Validation.dll.gz
+C:\Code\Blazor\BugTracker\Client\bin\Debug\net5.0\wwwroot\_framework\OneOf.dll.gz
+C:\Code\Blazor\BugTracker\Client\bin\Debug\net5.0\wwwroot\_framework\AntDesign.dll
+C:\Code\Blazor\BugTracker\Client\bin\Debug\net5.0\wwwroot\_framework\Microsoft.AspNetCore.Components.DataAnnotations.Validation.dll
+C:\Code\Blazor\BugTracker\Client\bin\Debug\net5.0\wwwroot\_framework\OneOf.dll
+C:\Code\Blazor\BugTracker\Client\obj\Debug\net5.0\build-gz\aMZN569A.gz
+C:\Code\Blazor\BugTracker\Client\obj\Debug\net5.0\build-gz\pdzBm14E.gz
+C:\Code\Blazor\BugTracker\Client\obj\Debug\net5.0\build-gz\xxKeAWpm.gz

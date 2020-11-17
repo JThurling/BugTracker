@@ -1,18 +1,59 @@
 @inherits LayoutComponentBase
 
-<div class="page">
-    <div class="sidebar">
-        <NavMenu />
-    </div>
+<Layout>
+    <Sider Breakpoint="@BreakpointType.Lg"
+           CollapsedWidth="0"
+           OnBreakpoint="broken => { Console.WriteLine(broken); }"
+           OnCollapse="collapsed => { Console.WriteLine(collapsed); }"
+           Style="overflow: auto;height: 100vh;position: fixed;left: 0;">
+        <div class="logo"/>
+        <Menu Theme="MenuTheme.Dark" Mode="MenuMode.Inline" DefaultSelectedKeys=@(new[] {"4"})>
+            <NavLink href="/">
+                <h4 class="text-white-50 p-3">BugTacker</h4>
+            </NavLink>
+            <MenuItem Key="1">
+                <NavLink href="counter">
+                    <Icon Type="home" Theme="outline"/>
+                    <span class="nav-text">Home</span>
+                </NavLink>
+            </MenuItem>
+            <MenuItem Key="2">
+                <Icon Type="video-camera" Theme="outline"/>
+                <span class="nav-text">nav 2</span>
+            </MenuItem>
+            <MenuItem Key="3">
+                <Icon Type="upload" Theme="outline"/>
+                <span class="nav-text">nav 3</span>
+            </MenuItem>
+            <MenuItem Key="4">
+                <Icon Type="user" Theme="outline"/>
+                <span class="nav-text">nav 4</span>
+            </MenuItem>
+        </Menu>
+    </Sider>
+    <Layout Style=" margin-left: 200px">
+        <Header Class="site-layout-sub-header-background shadow-sm" Style="padding: 0;"></Header>
+        <Content Style="margin: 24px 16px 0; overflow: initial; ">
+            <div class="site-layout-background" style="padding: 24px; text-align:center; ">
+                @Body
+            </div>
+        </Content>
+        <Footer Style="text-align: center;">Ant Design ©2018 Created by Ant UED</Footer>
+    </Layout>
+</Layout>
 
-    <div class="main">
-        <div class="top-row px-4 auth">
-            <LoginDisplay />
-            <a href="https://docs.microsoft.com/aspnet/" target="_blank">About</a>
-        </div>
+<style>
+    #components-layout-demo-responsive .logo {
+        height: 32px;
+        background: rgba(255, 255, 255, 0.2);
+        margin: 16px;
+    }
 
-        <div class="content px-4">
-            @Body
-        </div>
-    </div>
-</div>
+    .site-layout-sub-header-background {
+        background: #fff;
+    }
+
+    .site-layout-background {
+        background: #fff;
+    }
+</style>

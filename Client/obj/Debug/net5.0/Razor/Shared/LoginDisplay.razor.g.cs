@@ -80,6 +80,13 @@ using BugTracker.Client.Shared;
 #line hidden
 #nullable disable
 #nullable restore
+#line 12 "C:\Code\Blazor\BugTracker\Client\_Imports.razor"
+using AntDesign;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
 #line 1 "C:\Code\Blazor\BugTracker\Client\Shared\LoginDisplay.razor"
 using Microsoft.AspNetCore.Components.Authorization;
 

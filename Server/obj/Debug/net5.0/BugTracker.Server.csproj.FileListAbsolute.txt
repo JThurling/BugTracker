@@ -251,3 +251,6 @@ C:\Code\Blazor\BugTracker\Server\obj\Debug\net5.0\Razor\Pages\Shared\_Validation
 C:\Code\Blazor\BugTracker\Server\obj\Debug\net5.0\Razor\Pages\_ViewImports.cshtml.g.cs
 C:\Code\Blazor\BugTracker\Server\obj\Debug\net5.0\Razor\Pages\_ViewStart.cshtml.g.cs
 C:\Code\Blazor\BugTracker\Server\bin\Debug\net5.0\Serilog.dll
+C:\Code\Blazor\BugTracker\Server\bin\Debug\net5.0\AntDesign.dll
+C:\Code\Blazor\BugTracker\Server\bin\Debug\net5.0\Microsoft.AspNetCore.Components.DataAnnotations.Validation.dll
+C:\Code\Blazor\BugTracker\Server\bin\Debug\net5.0\OneOf.dll

@@ -87,6 +87,13 @@ using BugTracker.Client.Shared;
 #line hidden
 #nullable disable
 #nullable restore
+#line 12 "C:\Code\Blazor\BugTracker\Client\_Imports.razor"
+using AntDesign;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
 #line 2 "C:\Code\Blazor\BugTracker\Client\Pages\FetchData.razor"
 using Microsoft.AspNetCore.Authorization;
 
