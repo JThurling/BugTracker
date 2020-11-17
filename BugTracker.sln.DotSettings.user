@@ -1,0 +1,11 @@
+﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=bd037c4b_002D4ed4_002D41c7_002D9328_002Ddb61e531bec8/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="CreateBug_WhenCalled_CreatesNewBug #2" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;xUnit::067B33D6-0120-4042-93E9-87A08509813B::.NETCoreApp,Version=v5.0::BugTrackerTestSuite.IntegrationTests.BugController.CreateBug_WhenCalled_CreatesNewBug&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=cf4a0e53_002De823_002D4f98_002D8322_002D01a8d4501d85/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="CreateBug_WhenCalled_CreatesNewBug" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;xUnit::067B33D6-0120-4042-93E9-87A08509813B::.NETCoreApp,Version=v5.0::BugTrackerTestSuite.IntegrationTests.BugController.CreateBug_WhenCalled_CreatesNewBug&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>

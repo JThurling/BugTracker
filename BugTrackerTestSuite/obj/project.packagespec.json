@@ -18,7 +18,20 @@
     },
     "frameworks": {
       "netcoreapp5.0": {
-        "projectReferences": {}
+        "projectReferences": {
+          "C:\\Code\\Blazor\\BugTracker\\Client\\BugTracker.Client.csproj": {
+            "projectPath": "C:\\Code\\Blazor\\BugTracker\\Client\\BugTracker.Client.csproj"
+          },
+          "C:\\Code\\Blazor\\BugTracker\\Core\\Core.csproj": {
+            "projectPath": "C:\\Code\\Blazor\\BugTracker\\Core\\Core.csproj"
+          },
+          "C:\\Code\\Blazor\\BugTracker\\Infrastructure\\Infrastructure.csproj": {
+            "projectPath": "C:\\Code\\Blazor\\BugTracker\\Infrastructure\\Infrastructure.csproj"
+          },
+          "C:\\Code\\Blazor\\BugTracker\\Server\\BugTracker.Server.csproj": {
+            "projectPath": "C:\\Code\\Blazor\\BugTracker\\Server\\BugTracker.Server.csproj"
+          }
+        }
       }
     },
     "warningProperties": {
@@ -30,7 +43,15 @@
   "frameworks": {
     "netcoreapp5.0": {
       "dependencies": {
+        "FluentAssertions": {
+          "target": "Package",
+          "version": "[5.10.3, )"
+        },
         "Microsoft.AspNetCore.Mvc.Testing": {
+          "target": "Package",
+          "version": "[5.0.0, )"
+        },
+        "Microsoft.AspNetCore.TestHost": {
           "target": "Package",
           "version": "[5.0.0, )"
         },
