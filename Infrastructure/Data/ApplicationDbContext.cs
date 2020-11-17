@@ -1,4 +1,5 @@
 ﻿using Core.Models;
+using Core.Models.Bugs;
 using IdentityServer4.EntityFramework.Options;
 using Infrastructure.Configurations;
 using Microsoft.AspNetCore.ApiAuthorization.IdentityServer;
@@ -15,10 +16,16 @@ namespace Infrastructure.Data
         {
         }
 
+        public DbSet<BugEntity> Bugs { get; set; }
+
+
+
         protected override void OnModelCreating(ModelBuilder builder)
         {
             base.OnModelCreating(builder);
             builder.ApplyConfiguration(new RoleConfiguration());
+            builder.ApplyConfiguration(new UserConfiguration());
+            builder.ApplyConfiguration(new BugConfiguration());
         }
     }
 }

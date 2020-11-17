@@ -1,6 +1,5 @@
 ﻿using Core.Interfaces;
 using Serilog;
-using Serilog.Core;
 
 namespace Infrastructure.Services
 {

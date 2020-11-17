@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace Core.Models.Bugs
 {
@@ -6,16 +7,30 @@ namespace Core.Models.Bugs
     {
         public string Bug { get; set; }
 
-        public string ReportedBy { get; set; }
+        // public ApplicationUser ReportedBy { get; set; }
 
-        public DateTime BugReportedTime { get; set; }
+        public DateTime BugReportedTime { get; set; } = DateTime.Now;
 
-        public string Status { get; set; }
+        public Status Status { get; set; } = Status.Open;
 
-        public string AssignedTo { get; set; }
+        public List<ApplicationUser> User { get; set; }
 
         public DateTime Deadline { get; set; }
 
-        public string Priority { get; set; }
+        public Priority Priority { get; set; } = Priority.Low;
+    }
+
+    public enum Status
+    {
+        Open,
+        InProgress,
+        Closed
+    }
+
+    public enum Priority
+    {
+        Low,
+        Medium,
+        High
     }
 }
