@@ -254,3 +254,5 @@ C:\Code\Blazor\BugTracker\Server\bin\Debug\net5.0\Serilog.dll
 C:\Code\Blazor\BugTracker\Server\bin\Debug\net5.0\AntDesign.dll
 C:\Code\Blazor\BugTracker\Server\bin\Debug\net5.0\Microsoft.AspNetCore.Components.DataAnnotations.Validation.dll
 C:\Code\Blazor\BugTracker\Server\bin\Debug\net5.0\OneOf.dll
+C:\Code\Blazor\BugTracker\Server\bin\Debug\net5.0\Serilog.Sinks.File.dll
+C:\Code\Blazor\BugTracker\Server\bin\Debug\net5.0\Serilog.Sinks.Console.dll

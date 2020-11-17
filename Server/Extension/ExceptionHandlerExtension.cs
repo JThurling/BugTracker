@@ -1,5 +1,6 @@
 ﻿using System.Net;
 using Core.ErrorHandling;
+using Core.Interfaces;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Diagnostics;
 using Microsoft.AspNetCore.Http;
@@ -11,7 +12,7 @@ namespace BugTracker.Server.Extension
 {
     public static class ExceptionHandlerExtension
     {
-        public static void ConfigureExceptionHandler(this IApplicationBuilder app)
+        public static void ConfigureExceptionHandler(this IApplicationBuilder app, ILogging logger)
         {
             app.UseExceptionHandler(appError =>
             {
@@ -23,6 +24,8 @@ namespace BugTracker.Server.Extension
                     var contextFeature = context.Features.Get<IExceptionHandlerFeature>();
                     if (contextFeature != null)
                     {
+                        logger.LogError($"Something went wrong: {contextFeature.Error}");
+
                         await context.Response.WriteAsync(new ErrorDetails()
                         {
                             StatusCode = context.Response.StatusCode,

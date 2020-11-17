@@ -48,11 +48,11 @@ namespace BugTracker.Server
 
             services.AddControllersWithViews();
             services.AddRazorPages();
-            services.AddScoped<ITest, Test>();
+            services.AddScoped<ILogging, Logging>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env, ILogging logger)
         {
             if (env.IsDevelopment())
             {
@@ -67,7 +67,7 @@ namespace BugTracker.Server
                 app.UseHsts();
             }
 
-            app.ConfigureExceptionHandler();
+            app.ConfigureExceptionHandler(logger);
             app.UseHttpsRedirection();
             app.UseBlazorFrameworkFiles();
             app.UseStaticFiles();
