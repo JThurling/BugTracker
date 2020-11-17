@@ -1,0 +1,12 @@
+C:\Code\Blazor\BugTracker\Shared\bin\Debug\net5.0\BugTracker.Shared.deps.json
+C:\Code\Blazor\BugTracker\Shared\bin\Debug\net5.0\BugTracker.Shared.dll
+C:\Code\Blazor\BugTracker\Shared\bin\Debug\net5.0\ref\BugTracker.Shared.dll
+C:\Code\Blazor\BugTracker\Shared\bin\Debug\net5.0\BugTracker.Shared.pdb
+C:\Code\Blazor\BugTracker\Shared\obj\Debug\net5.0\BugTracker.Shared.csprojAssemblyReference.cache
+C:\Code\Blazor\BugTracker\Shared\obj\Debug\net5.0\BugTracker.Shared.GeneratedMSBuildEditorConfig.editorconfig
+C:\Code\Blazor\BugTracker\Shared\obj\Debug\net5.0\BugTracker.Shared.AssemblyInfoInputs.cache
+C:\Code\Blazor\BugTracker\Shared\obj\Debug\net5.0\BugTracker.Shared.AssemblyInfo.cs
+C:\Code\Blazor\BugTracker\Shared\obj\Debug\net5.0\BugTracker.Shared.csproj.CoreCompileInputs.cache
+C:\Code\Blazor\BugTracker\Shared\obj\Debug\net5.0\BugTracker.Shared.dll
+C:\Code\Blazor\BugTracker\Shared\obj\Debug\net5.0\ref\BugTracker.Shared.dll
+C:\Code\Blazor\BugTracker\Shared\obj\Debug\net5.0\BugTracker.Shared.pdb

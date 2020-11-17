@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "tMFQUdibRCDqNCy4yzcFAUn19Rj31b8nDLX/+G3bBqCC1eL7Yw8u7vGXzL03y49dhyfkA/y+zMfoFbpmA8N04w==",
+  "dgSpecHash": "32/etU8suBi0SckCiogTgHF/cEtp4Xid1KMhtqsTtuksB9i1d9ywj5gFM4UCPyyQrbEm+HYmjexqRh+MBmXb8A==",
   "success": true,
   "projectFilePath": "C:\\Code\\Blazor\\BugTracker\\Client\\BugTracker.Client.csproj",
   "expectedPackageFiles": [
@@ -31,6 +31,7 @@
     "C:\\Users\\jthur\\.nuget\\packages\\microsoft.extensions.primitives\\5.0.0\\microsoft.extensions.primitives.5.0.0.nupkg.sha512",
     "C:\\Users\\jthur\\.nuget\\packages\\microsoft.jsinterop\\5.0.0\\microsoft.jsinterop.5.0.0.nupkg.sha512",
     "C:\\Users\\jthur\\.nuget\\packages\\microsoft.jsinterop.webassembly\\5.0.0\\microsoft.jsinterop.webassembly.5.0.0.nupkg.sha512",
+    "C:\\Users\\jthur\\.nuget\\packages\\serilog\\2.10.0\\serilog.2.10.0.nupkg.sha512",
     "C:\\Users\\jthur\\.nuget\\packages\\system.io.pipelines\\5.0.0\\system.io.pipelines.5.0.0.nupkg.sha512",
     "C:\\Users\\jthur\\.nuget\\packages\\system.net.http.json\\5.0.0\\system.net.http.json.5.0.0.nupkg.sha512",
     "C:\\Users\\jthur\\.nuget\\packages\\microsoft.netcore.app.runtime.browser-wasm\\5.0.0\\microsoft.netcore.app.runtime.browser-wasm.5.0.0.nupkg.sha512"
