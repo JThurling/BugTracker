@@ -43,7 +43,7 @@ namespace BugTrackerTestSuite.IntegrationTests
         [Fact]
         public async Task GetBug_WhenCalled_GetsListOfBugs()
         {
-            var response = await _client.GetAsync("api/Bug");
+            var response = await _client.GetAsync("api/bug");
             response.EnsureSuccessStatusCode();
             response.StatusCode.Should().Be(HttpStatusCode.OK);
         }
@@ -51,9 +51,8 @@ namespace BugTrackerTestSuite.IntegrationTests
         [Fact]
         public async Task GetBug_WhenCalled_GetSingleBug()
         {
-            var response = await _client.GetAsync("api/Bug");
+            var response = await _client.GetAsync("api/Bug/1");
             response.EnsureSuccessStatusCode();
-            var responseString = await response.Content.ReadAsStringAsync();
             response.StatusCode.Should().Be(HttpStatusCode.OK);
         }
 

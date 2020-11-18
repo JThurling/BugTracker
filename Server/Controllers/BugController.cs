@@ -14,15 +14,15 @@ namespace BugTracker.Server.Controllers
         }
 
         [HttpGet]
-        public async Task<ActionResult<List<BugInput>>> GetBugs([FromBody] BugInput bugs)
+        public async Task<ActionResult<IEnumerable<BugInput>>> GetBugs()
         {
-            return Ok(bugs);
+            return Ok();
         }
 
         [HttpGet("/{id}")]
-        public async Task<ActionResult<BugInput>> GetSingleBug([FromBody] BugInput bugs)
+        public async Task<ActionResult<BugInput>> GetSingleBug(int id)
         {
-            return Ok(bugs);
+            return Ok();
         }
 
         [HttpDelete]
