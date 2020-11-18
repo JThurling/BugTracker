@@ -207,7 +207,6 @@
     },
     "lazyAssembly": null,
     "pdb": {
-      "BugTracker.Shared.pdb": "sha256-\/fO6JJq0b9h6bdoW9x5N5Fc0bTHej2sA+ru0yq3FXAA=",
       "BugTracker.Client.pdb": "sha256-wVyOqK5t7U4l6vJr5j1eBaIWsbaQTmQHA+raXet0Xvs="
     },
     "runtime": {

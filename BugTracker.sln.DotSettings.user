@@ -9,5 +9,6 @@
     &lt;TestId&gt;xUnit::067B33D6-0120-4042-93E9-87A08509813B::.NETCoreApp,Version=v5.0::BugTrackerTestSuite.IntegrationTests.BugController.CreateBug_WhenCalled_CreatesNewBug&lt;/TestId&gt;&#xD;
     &lt;TestId&gt;xUnit::067B33D6-0120-4042-93E9-87A08509813B::.NETCoreApp,Version=v5.0::BugTrackerTestSuite.IntegrationTests.BugController.GetBug_WhenCalled_GetSingleBug&lt;/TestId&gt;&#xD;
     &lt;TestId&gt;xUnit::067B33D6-0120-4042-93E9-87A08509813B::.NETCoreApp,Version=v5.0::BugTrackerTestSuite.IntegrationTests.BugController.GetBug_WhenCalled_GetsListOfBugs&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::067B33D6-0120-4042-93E9-87A08509813B::.NETCoreApp,Version=v5.0::BugTrackerTestSuite.IntegrationTests.BugController.DeleteBug_WhenCalled_DeletesBug&lt;/TestId&gt;&#xD;
   &lt;/TestAncestor&gt;&#xD;
 &lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>

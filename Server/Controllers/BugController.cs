@@ -26,9 +26,9 @@ namespace BugTracker.Server.Controllers
         }
 
         [HttpDelete]
-        public async Task<ActionResult<BugInput>> DeleteBug([FromBody] BugInput bug)
+        public async Task<ActionResult<BugInput>> DeleteBug()
         {
-            return Ok(bug);
+            return Ok();
         }
     }
 }
