@@ -566,5 +566,3 @@ C:\Code\Blazor\BugTracker\BugTrackerTestSuite\bin\Debug\net5.0\Infrastructure.pd
 C:\Code\Blazor\BugTracker\BugTrackerTestSuite\bin\Debug\net5.0\BugTracker.Server.pdb
 C:\Code\Blazor\BugTracker\BugTrackerTestSuite\bin\Debug\net5.0\BugTracker.Shared.pdb
 C:\Code\Blazor\BugTracker\BugTrackerTestSuite\bin\Debug\net5.0\FluentAssertions.dll
-C:\Code\Blazor\BugTracker\BugTrackerTestSuite\bin\Debug\net5.0\BugTracker.Client.StaticWebAssets.xml
-C:\Code\Blazor\BugTracker\BugTrackerTestSuite\bin\Debug\net5.0\BugTracker.Server.StaticWebAssets.xml

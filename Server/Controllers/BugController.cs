@@ -4,6 +4,7 @@ using AutoMapper;
 using Core.Interfaces.Services;
 using Core.Models.Bugs;
 using Core.Models.Inputs.Bug;
+using Core.Models.Output.Bug;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BugTracker.Server.Controllers
@@ -34,15 +35,23 @@ namespace BugTracker.Server.Controllers
         }
 
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<BugInput>>> GetBugs()
+        public async Task<ActionResult<IEnumerable<BugOutput>>> GetBugs()
         {
-            return Ok();
+            var bugs = await _bug.GetAll();
+
+            var map = _mapper.Map<IEnumerable<BugEntity>, IEnumerable<BugOutput>>(bugs);
+
+            return Ok(map);
         }
 
-        [HttpGet("/{id}")]
-        public async Task<ActionResult<int>> GetSingleBug(int id)
+        [HttpGet("{id}")]
+        public async Task<ActionResult<BugOutput>> GetSingleBug(int id)
         {
-            return Ok(id);
+            var bugs = await _bug.GetOne(id);
+
+            var map = _mapper.Map<BugEntity, BugOutput>(bugs);
+
+            return Ok(map);
         }
 
         [HttpDelete]

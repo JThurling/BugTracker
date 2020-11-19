@@ -5,9 +5,11 @@ using System.Text;
 using System.Threading.Tasks;
 using BugTracker.Server;
 using BugTracker.Server.Extension;
+using Core.Interfaces.Services;
 using Core.Models.Bugs;
 using Core.Models.Inputs.Bug;
 using FluentAssertions;
+using Moq;
 using Newtonsoft.Json;
 using Xunit;
 
@@ -16,9 +18,12 @@ namespace BugTrackerTestSuite.IntegrationTests
     public class BugController : IClassFixture<WebAppFactory<Startup>>
     {
         private readonly HttpClient _client;
+        private readonly Mock<IBugService> _mockRepo;
+
         public BugController(WebAppFactory<Startup> factory)
         {
             _client = factory.CreateClient();
+            _mockRepo = new Mock<IBugService>();
         }
 
         [Fact]
@@ -51,14 +56,6 @@ namespace BugTrackerTestSuite.IntegrationTests
         public async Task GetBug_WhenCalled_GetsListOfBugs()
         {
             var response = await _client.GetAsync("api/bug");
-            response.EnsureSuccessStatusCode();
-            response.StatusCode.Should().Be(HttpStatusCode.OK);
-        }
-
-        [Fact]
-        public async Task GetBug_WhenCalled_GetSingleBug()
-        {
-            var response = await _client.GetAsync("api/bug/1");
             response.EnsureSuccessStatusCode();
             response.StatusCode.Should().Be(HttpStatusCode.OK);
         }

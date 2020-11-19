@@ -1,8 +1,11 @@
-﻿using System.Threading.Tasks;
+﻿using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 using Core.Interfaces.Services;
 using Core.Models.Bugs;
 using Core.Models.Inputs.Bug;
 using Infrastructure.Data;
+using Microsoft.EntityFrameworkCore;
 
 namespace Infrastructure.Services
 {
@@ -27,6 +30,20 @@ namespace Infrastructure.Services
             if (result <= 0) return 0;
 
             return 1;
+        }
+
+        public async Task<IEnumerable<BugEntity>> GetAll()
+        {
+            var bugs = await _context.Bugs.ToListAsync();
+
+            return bugs;
+        }
+
+        public async Task<BugEntity> GetOne(int id)
+        {
+            var bugs = await _context.Bugs.FindAsync(id);
+
+            return bugs;
         }
     }
 }
