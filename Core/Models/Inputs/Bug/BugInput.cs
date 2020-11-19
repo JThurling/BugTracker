@@ -8,9 +8,7 @@ namespace Core.Models.Inputs.Bug
     {
         [Required(ErrorMessage = "Please Enter The Bug you found")]
         public string Bug { get; set; }
-
-        public DateTime BugReportedTime { get; set; }
-
+        
         public Status Status { get; set; } = Status.Open;
 
         public DateTime Deadline { get; set; }

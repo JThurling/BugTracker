@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Net;
 using System.Net.Http;
 using System.Text;
@@ -9,8 +8,6 @@ using BugTracker.Server.Extension;
 using Core.Models.Bugs;
 using Core.Models.Inputs.Bug;
 using FluentAssertions;
-using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.TestHost;
 using Newtonsoft.Json;
 using Xunit;
 
@@ -27,17 +24,27 @@ namespace BugTrackerTestSuite.IntegrationTests
         [Fact]
         public async Task CreateBug_WhenCalled_CreatesNewBug()
         {
-            var response = await _client.PostAsync("api/Bug", new StringContent(JsonConvert.SerializeObject(new BugInput
+            var response = await _client.PostAsync("api/bug", new StringContent(JsonConvert.SerializeObject(new BugInput
             {
-                Bug = "Hello",
+                Bug = "This is a bug that I made",
                 Deadline = DateTime.Today,
                 Priority = Priority.Low,
                 Status = Status.Open
             }), Encoding.UTF8, "application/json"));
             response.EnsureSuccessStatusCode();
-            var responseString = await response.Content.ReadAsStringAsync();
             response.StatusCode.Should().Be(HttpStatusCode.OK);
-            Assert.Contains("Hello", responseString);
+        }
+
+        [Fact]
+        public async Task CreateBug_WhenCalled_FailsBug()
+        {
+            var response = await _client.PostAsync("api/bug", new StringContent(JsonConvert.SerializeObject(new BugInput
+            {
+                Deadline = DateTime.Today,
+                Priority = Priority.Low,
+                Status = Status.Open
+            }), Encoding.UTF8, "application/json"));
+            response.StatusCode.Should().Be(HttpStatusCode.BadRequest);
         }
 
         [Fact]
@@ -51,7 +58,7 @@ namespace BugTrackerTestSuite.IntegrationTests
         [Fact]
         public async Task GetBug_WhenCalled_GetSingleBug()
         {
-            var response = await _client.GetAsync("api/Bug/1");
+            var response = await _client.GetAsync("api/bug/1");
             response.EnsureSuccessStatusCode();
             response.StatusCode.Should().Be(HttpStatusCode.OK);
         }

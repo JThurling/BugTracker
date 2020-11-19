@@ -49,6 +49,7 @@ namespace BugTracker.Server
             services.AddControllersWithViews();
             services.AddRazorPages();
             services.AddScoped<ILogging, Logging>();
+            services.ConfigureAppServices();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

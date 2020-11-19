@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Runtime.Serialization;
 
 namespace Core.Models.Bugs
 {
@@ -20,15 +21,21 @@ namespace Core.Models.Bugs
 
     public enum Status
     {
+        [EnumMember(Value = "Open")]
         Open,
+        [EnumMember(Value = "In Progress")]
         InProgress,
+        [EnumMember(Value = "Closed")]
         Closed
     }
 
     public enum Priority
     {
+        [EnumMember(Value = "Low")]
         Low,
+        [EnumMember(Value = "Medium")]
         Medium,
+        [EnumMember(Value = "High")]
         High
     }
 }
