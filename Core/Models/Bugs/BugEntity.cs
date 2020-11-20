@@ -8,6 +8,8 @@ namespace Core.Models.Bugs
     {
         public string Bug { get; set; }
 
+        public string Details { get; set; }
+
         public DateTime BugReportedTime { get; set; } = DateTime.Now;
 
         public Status Status { get; set; } = Status.Open;

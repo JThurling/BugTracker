@@ -45,5 +45,20 @@ namespace Infrastructure.Services
 
             return bugs;
         }
+
+        public async Task<int> DeleteBug(int id)
+        {
+            var bug = await _context.Bugs.FindAsync(id);
+
+            if (bug.Equals(null)) return 0;
+
+            _context.Bugs.Remove(bug);
+
+            var result = await _context.SaveChangesAsync();
+
+            if (result <= 0) return 0;
+
+            return 1;
+        }
     }
 }

@@ -12,5 +12,7 @@ namespace Core.Interfaces.Services
         Task<IEnumerable<BugEntity>> GetAll();
 
         Task<BugEntity> GetOne(int id);
+
+        Task<int> DeleteBug(int id);
     }
 }

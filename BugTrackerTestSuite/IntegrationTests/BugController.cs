@@ -59,13 +59,5 @@ namespace BugTrackerTestSuite.IntegrationTests
             response.EnsureSuccessStatusCode();
             response.StatusCode.Should().Be(HttpStatusCode.OK);
         }
-
-        [Fact]
-        public async Task DeleteBug_WhenCalled_DeletesBug()
-        {
-            var response = await _client.DeleteAsync("api/Bug");
-            response.EnsureSuccessStatusCode();
-            response.StatusCode.Should().Be(HttpStatusCode.OK);
-        }
     }
 }

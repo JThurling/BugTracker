@@ -55,8 +55,14 @@ namespace BugTracker.Server.Controllers
         }
 
         [HttpDelete]
-        public async Task<ActionResult<BugInput>> DeleteBug()
+        public async Task<ActionResult<BugInput>> DeleteBug([FromQuery]int id)
         {
+            if (id.Equals(null)) return BadRequest();
+
+            var bugs = await _bug.DeleteBug(id);
+
+            if (bugs.Equals(0)) return BadRequest();
+
             return Ok();
         }
     }
