@@ -18,6 +18,10 @@ namespace Infrastructure.Data
 
         public DbSet<BugEntity> Bugs { get; set; }
 
+        public DbSet<Comments> Comments { get; set; }
+
+        public DbSet<SubTask> SubTasks { get; set; }
+
 
 
         protected override void OnModelCreating(ModelBuilder builder)

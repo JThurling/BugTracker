@@ -34,7 +34,10 @@ namespace Infrastructure.Services
 
         public async Task<IEnumerable<BugEntity>> GetAll()
         {
-            var bugs = await _context.Bugs.ToListAsync();
+            var bugs = await _context.Bugs
+                .Include(x => x.Comments)
+                .Include(x => x.SubTasks)
+                .ToListAsync();
 
             return bugs;
         }

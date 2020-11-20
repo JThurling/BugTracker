@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Infrastructure.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20201120081301_AddedExtraBugInfo")]
-    partial class AddedExtraBugInfo
+    [Migration("20201120103135_FixedBugMigrations")]
+    partial class FixedBugMigrations
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -42,9 +42,6 @@ namespace Infrastructure.Data.Migrations
                         .HasColumnType("nvarchar(450)");
 
                     b.Property<int>("AccessFailedCount")
-                        .HasColumnType("int");
-
-                    b.Property<int>("BugEntityId")
                         .HasColumnType("int");
 
                     b.Property<string>("ConcurrencyStamp")
@@ -137,7 +134,9 @@ namespace Infrastructure.Data.Migrations
             modelBuilder.Entity("Core.Models.Bugs.Comments", b =>
                 {
                     b.Property<int>("Id")
-                        .HasColumnType("int");
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .UseIdentityColumn();
 
                     b.Property<int>("BugEntity")
                         .HasColumnType("int");
@@ -150,13 +149,17 @@ namespace Infrastructure.Data.Migrations
 
                     b.HasKey("Id");
 
+                    b.HasIndex("BugEntity");
+
                     b.ToTable("Comments");
                 });
 
             modelBuilder.Entity("Core.Models.Bugs.SubTask", b =>
                 {
                     b.Property<int>("Id")
-                        .HasColumnType("int");
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .UseIdentityColumn();
 
                     b.Property<int>("BugEntity")
                         .HasColumnType("int");
@@ -169,7 +172,9 @@ namespace Infrastructure.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("SubTask");
+                    b.HasIndex("BugEntity");
+
+                    b.ToTable("SubTasks");
                 });
 
             modelBuilder.Entity("IdentityServer4.EntityFramework.Entities.DeviceFlowCodes", b =>
@@ -304,22 +309,22 @@ namespace Infrastructure.Data.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "24a24804-3120-40e4-9c50-a8fdfa765c9e",
-                            ConcurrencyStamp = "920418c0-15f2-47ea-92d1-2c713cd07770",
+                            Id = "0925abe4-8162-43b7-ac3b-917b3d3648e3",
+                            ConcurrencyStamp = "ec59c0ba-4841-481b-a70e-ddedf8560980",
                             Name = "Admin",
                             NormalizedName = "ADMIN"
                         },
                         new
                         {
-                            Id = "26a1854a-5018-4357-9945-34929b2ef6d3",
-                            ConcurrencyStamp = "892ab218-1d8f-4dba-b8af-81b500ab2226",
+                            Id = "bd073591-6e03-4981-826b-b2e1affba8c5",
+                            ConcurrencyStamp = "ca34692a-04bd-4f05-a1be-7ca72507d85f",
                             Name = "Manager",
                             NormalizedName = "Manager"
                         },
                         new
                         {
-                            Id = "e6e53d7e-d685-4246-bebe-dc101a540944",
-                            ConcurrencyStamp = "db924aa5-775c-4e9e-b381-9cbaca64878a",
+                            Id = "bd4f33cb-cddd-419b-95ba-c74cc15adbc6",
+                            ConcurrencyStamp = "c6be0033-b4a2-4eb4-82a7-7261c43e74ea",
                             Name = "Developer",
                             NormalizedName = "DEVELOPER"
                         });
@@ -452,7 +457,7 @@ namespace Infrastructure.Data.Migrations
                 {
                     b.HasOne("Core.Models.Bugs.BugEntity", "Bug")
                         .WithMany("Comments")
-                        .HasForeignKey("Id")
+                        .HasForeignKey("BugEntity")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
@@ -463,7 +468,7 @@ namespace Infrastructure.Data.Migrations
                 {
                     b.HasOne("Core.Models.Bugs.BugEntity", "Bug")
                         .WithMany("SubTasks")
-                        .HasForeignKey("Id")
+                        .HasForeignKey("BugEntity")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 

@@ -10,11 +10,11 @@ namespace Infrastructure.Configurations
         {
             builder.HasMany(u => u.SubTasks)
                 .WithOne(u => u.Bug)
-                .HasForeignKey(k => k.Id);
+                .HasForeignKey(k => k.BugEntity);
 
             builder.HasMany(u => u.Comments)
                 .WithOne(u => u.Bug)
-                .HasForeignKey(k => k.Id);
+                .HasForeignKey(k => k.BugEntity);
 
             builder.HasMany(u => u.User)
                 .WithMany(b => b.Bug);

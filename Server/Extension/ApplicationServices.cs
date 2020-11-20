@@ -14,6 +14,7 @@ namespace BugTracker.Server.Extension
             service.AddScoped<IBugService, BugService>();
             service.AddAutoMapper(typeof(MappingProfiles));
             service.AddScoped<ICommentService, CommentService>();
+            service.AddScoped<ISubService, SubService>();
         }
     }
 }

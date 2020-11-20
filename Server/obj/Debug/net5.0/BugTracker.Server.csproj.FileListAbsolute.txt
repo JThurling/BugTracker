@@ -256,3 +256,6 @@ C:\Code\Blazor\BugTracker\Server\bin\Debug\net5.0\Microsoft.AspNetCore.Component
 C:\Code\Blazor\BugTracker\Server\bin\Debug\net5.0\OneOf.dll
 C:\Code\Blazor\BugTracker\Server\bin\Debug\net5.0\Serilog.Sinks.File.dll
 C:\Code\Blazor\BugTracker\Server\bin\Debug\net5.0\Serilog.Sinks.Console.dll
+C:\Code\Blazor\BugTracker\Server\bin\Debug\net5.0\Microsoft.AspNetCore.Http.Connections.Client.dll
+C:\Code\Blazor\BugTracker\Server\bin\Debug\net5.0\Microsoft.AspNetCore.SignalR.Client.dll
+C:\Code\Blazor\BugTracker\Server\bin\Debug\net5.0\Microsoft.AspNetCore.SignalR.Client.Core.dll

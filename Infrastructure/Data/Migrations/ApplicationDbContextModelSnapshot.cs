@@ -132,7 +132,9 @@ namespace Infrastructure.Data.Migrations
             modelBuilder.Entity("Core.Models.Bugs.Comments", b =>
                 {
                     b.Property<int>("Id")
-                        .HasColumnType("int");
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .UseIdentityColumn();
 
                     b.Property<int>("BugEntity")
                         .HasColumnType("int");
@@ -145,13 +147,17 @@ namespace Infrastructure.Data.Migrations
 
                     b.HasKey("Id");
 
+                    b.HasIndex("BugEntity");
+
                     b.ToTable("Comments");
                 });
 
             modelBuilder.Entity("Core.Models.Bugs.SubTask", b =>
                 {
                     b.Property<int>("Id")
-                        .HasColumnType("int");
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .UseIdentityColumn();
 
                     b.Property<int>("BugEntity")
                         .HasColumnType("int");
@@ -164,7 +170,9 @@ namespace Infrastructure.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("SubTask");
+                    b.HasIndex("BugEntity");
+
+                    b.ToTable("SubTasks");
                 });
 
             modelBuilder.Entity("IdentityServer4.EntityFramework.Entities.DeviceFlowCodes", b =>
@@ -299,22 +307,22 @@ namespace Infrastructure.Data.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "1aa88ac1-2954-4fa5-9d0e-5fa075874b15",
-                            ConcurrencyStamp = "75af9280-6bbc-454d-8d7a-f2383f6b23c9",
+                            Id = "0925abe4-8162-43b7-ac3b-917b3d3648e3",
+                            ConcurrencyStamp = "ec59c0ba-4841-481b-a70e-ddedf8560980",
                             Name = "Admin",
                             NormalizedName = "ADMIN"
                         },
                         new
                         {
-                            Id = "d951b215-f6dd-4ab7-be38-4c388ba54814",
-                            ConcurrencyStamp = "43373fb5-365d-49f0-ae1f-2e9d68fb1cf9",
+                            Id = "bd073591-6e03-4981-826b-b2e1affba8c5",
+                            ConcurrencyStamp = "ca34692a-04bd-4f05-a1be-7ca72507d85f",
                             Name = "Manager",
                             NormalizedName = "Manager"
                         },
                         new
                         {
-                            Id = "69613c57-5155-4b5e-beaa-64c59005e6e7",
-                            ConcurrencyStamp = "3d6e3e16-ed5d-42ae-836e-7e85ac07e966",
+                            Id = "bd4f33cb-cddd-419b-95ba-c74cc15adbc6",
+                            ConcurrencyStamp = "c6be0033-b4a2-4eb4-82a7-7261c43e74ea",
                             Name = "Developer",
                             NormalizedName = "DEVELOPER"
                         });
@@ -447,7 +455,7 @@ namespace Infrastructure.Data.Migrations
                 {
                     b.HasOne("Core.Models.Bugs.BugEntity", "Bug")
                         .WithMany("Comments")
-                        .HasForeignKey("Id")
+                        .HasForeignKey("BugEntity")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
@@ -458,7 +466,7 @@ namespace Infrastructure.Data.Migrations
                 {
                     b.HasOne("Core.Models.Bugs.BugEntity", "Bug")
                         .WithMany("SubTasks")
-                        .HasForeignKey("Id")
+                        .HasForeignKey("BugEntity")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
