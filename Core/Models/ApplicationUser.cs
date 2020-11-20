@@ -9,7 +9,5 @@ namespace Core.Models
     {
 
         public List<BugEntity> Bug { get; set; }
-
-        public int BugEntityId { get; set; }
     }
 }

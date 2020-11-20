@@ -19,6 +19,10 @@ namespace Core.Models.Bugs
         public DateTime Deadline { get; set; }
 
         public Priority Priority { get; set; } = Priority.Low;
+
+        public List<SubTask> SubTasks { get; set; }
+
+        public List<Comments> Comments { get; set; }
     }
 
     public enum Status
