@@ -4,106 +4,6 @@
     "C:\\Code\\Blazor\\BugTracker\\Infrastructure\\Infrastructure.csproj": {}
   },
   "projects": {
-    "C:\\Code\\Blazor\\BugTracker\\Core\\Core.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "C:\\Code\\Blazor\\BugTracker\\Core\\Core.csproj",
-        "projectName": "Core",
-        "projectPath": "C:\\Code\\Blazor\\BugTracker\\Core\\Core.csproj",
-        "packagesPath": "C:\\Users\\jthur\\.nuget\\packages\\",
-        "outputPath": "C:\\Code\\Blazor\\BugTracker\\Core\\obj\\",
-        "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\"
-        ],
-        "configFilePaths": [
-          "C:\\Users\\jthur\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
-        ],
-        "originalTargetFrameworks": [
-          "net5.0"
-        ],
-        "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {}
-        },
-        "frameworks": {
-          "net5.0": {
-            "targetAlias": "net5.0",
-            "projectReferences": {}
-          }
-        },
-        "warningProperties": {
-          "warnAsError": [
-            "NU1605"
-          ]
-        }
-      },
-      "frameworks": {
-        "net5.0": {
-          "targetAlias": "net5.0",
-          "dependencies": {
-            "Microsoft.AspNetCore.ApiAuthorization.IdentityServer": {
-              "target": "Package",
-              "version": "[5.0.0, )"
-            },
-            "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore": {
-              "target": "Package",
-              "version": "[5.0.0, )"
-            },
-            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
-              "target": "Package",
-              "version": "[5.0.0, )"
-            },
-            "Microsoft.AspNetCore.Identity.UI": {
-              "target": "Package",
-              "version": "[5.0.0, )"
-            },
-            "Microsoft.EntityFrameworkCore.Sqlite": {
-              "target": "Package",
-              "version": "[5.0.0, )"
-            },
-            "Microsoft.EntityFrameworkCore.Tools": {
-              "target": "Package",
-              "version": "[5.0.0, )"
-            },
-            "Newtonsoft.Json": {
-              "target": "Package",
-              "version": "[12.0.3, )"
-            },
-            "Serilog": {
-              "target": "Package",
-              "version": "[2.10.0, )"
-            },
-            "Serilog.Sinks.Console": {
-              "target": "Package",
-              "version": "[3.1.1, )"
-            },
-            "Serilog.Sinks.File": {
-              "target": "Package",
-              "version": "[4.1.0, )"
-            }
-          },
-          "imports": [
-            "net461",
-            "net462",
-            "net47",
-            "net471",
-            "net472",
-            "net48"
-          ],
-          "assetTargetFallback": true,
-          "warn": true,
-          "frameworkReferences": {
-            "Microsoft.NETCore.App": {
-              "privateAssets": "all"
-            }
-          },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
-        }
-      }
-    },
     "C:\\Code\\Blazor\\BugTracker\\Infrastructure\\Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -132,8 +32,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Code\\Blazor\\BugTracker\\Core\\Core.csproj": {
-                "projectPath": "C:\\Code\\Blazor\\BugTracker\\Core\\Core.csproj"
+              "C:\\Code\\Blazor\\BugTracker\\Shared\\BugTracker.Shared.csproj": {
+                "projectPath": "C:\\Code\\Blazor\\BugTracker\\Shared\\BugTracker.Shared.csproj"
               }
             }
           }
@@ -183,6 +83,86 @@
             "NLog": {
               "target": "Package",
               "version": "[4.7.5, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[12.0.3, )"
+            },
+            "Serilog": {
+              "target": "Package",
+              "version": "[2.10.0, )"
+            },
+            "Serilog.Sinks.Console": {
+              "target": "Package",
+              "version": "[3.1.1, )"
+            },
+            "Serilog.Sinks.File": {
+              "target": "Package",
+              "version": "[4.1.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Code\\Blazor\\BugTracker\\Shared\\BugTracker.Shared.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Code\\Blazor\\BugTracker\\Shared\\BugTracker.Shared.csproj",
+        "projectName": "BugTracker.Shared",
+        "projectPath": "C:\\Code\\Blazor\\BugTracker\\Shared\\BugTracker.Shared.csproj",
+        "packagesPath": "C:\\Users\\jthur\\.nuget\\packages\\",
+        "outputPath": "C:\\Code\\Blazor\\BugTracker\\Shared\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\jthur\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.0, )"
             },
             "Newtonsoft.Json": {
               "target": "Package",

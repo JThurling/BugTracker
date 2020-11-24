@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "P2ALiuz/YuX5mj7mlxzjQH6Y+kDUeyB+6nOooPXTEfBEJHfALeFcyZa5RkXvjQ+VqIt4M9SaI43yCZonwjSRcg==",
+  "dgSpecHash": "mYc1baooqCekxyhMQz67N1UD8E2rVnNYOSaUjeERmmWIhpI7F6/ysL4vVh3mOR2oVdRDatli6L1wuYbFmgULuQ==",
   "success": true,
   "projectFilePath": "C:\\Code\\Blazor\\BugTracker\\Server\\BugTracker.Server.csproj",
   "expectedPackageFiles": [

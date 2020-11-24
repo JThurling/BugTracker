@@ -4319,7 +4319,6 @@
           "Microsoft.AspNetCore.Components.WebAssembly.Authentication": "5.0.0",
           "Microsoft.AspNetCore.SignalR.Client": "5.0.0",
           "Microsoft.Extensions.Http": "5.0.0",
-          "Serilog": "2.10.0",
           "System.Net.Http.Json": "5.0.0"
         },
         "compile": {
@@ -4369,42 +4368,24 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
         "dependencies": {
-          "Serilog": "2.10.0"
-        },
-        "compile": {
-          "bin/placeholder/BugTracker.Shared.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/BugTracker.Shared.dll": {}
-        }
-      },
-      "Core/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v5.0",
-        "dependencies": {
-          "Microsoft.AspNetCore.ApiAuthorization.IdentityServer": "5.0.0",
-          "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore": "5.0.0",
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "5.0.0",
-          "Microsoft.AspNetCore.Identity.UI": "5.0.0",
-          "Microsoft.EntityFrameworkCore.Sqlite": "5.0.0",
-          "Microsoft.EntityFrameworkCore.Tools": "5.0.0",
           "Newtonsoft.Json": "12.0.3",
           "Serilog": "2.10.0",
           "Serilog.Sinks.Console": "3.1.1",
           "Serilog.Sinks.File": "4.1.0"
         },
         "compile": {
-          "bin/placeholder/Core.dll": {}
+          "bin/placeholder/BugTracker.Shared.dll": {}
         },
         "runtime": {
-          "bin/placeholder/Core.dll": {}
+          "bin/placeholder/BugTracker.Shared.dll": {}
         }
       },
       "Infrastructure/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
         "dependencies": {
-          "Core": "1.0.0",
+          "BugTracker.Shared": "1.0.0",
           "Microsoft.AspNetCore.ApiAuthorization.IdentityServer": "5.0.0",
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "5.0.0",
           "Microsoft.EntityFrameworkCore": "5.0.0",
@@ -13876,11 +13857,6 @@
       "path": "../Shared/BugTracker.Shared.csproj",
       "msbuildProject": "../Shared/BugTracker.Shared.csproj"
     },
-    "Core/1.0.0": {
-      "type": "project",
-      "path": "../Core/Core.csproj",
-      "msbuildProject": "../Core/Core.csproj"
-    },
     "Infrastructure/1.0.0": {
       "type": "project",
       "path": "../Infrastructure/Infrastructure.csproj",
@@ -13891,7 +13867,6 @@
     "net5.0": [
       "BugTracker.Client >= 1.0.0",
       "BugTracker.Server >= 1.0.0",
-      "Core >= 1.0.0",
       "FluentAssertions >= 5.10.3",
       "Infrastructure >= 1.0.0",
       "Microsoft.AspNetCore.Mvc.Testing >= 5.0.0",
@@ -13940,9 +13915,6 @@
           "projectReferences": {
             "C:\\Code\\Blazor\\BugTracker\\Client\\BugTracker.Client.csproj": {
               "projectPath": "C:\\Code\\Blazor\\BugTracker\\Client\\BugTracker.Client.csproj"
-            },
-            "C:\\Code\\Blazor\\BugTracker\\Core\\Core.csproj": {
-              "projectPath": "C:\\Code\\Blazor\\BugTracker\\Core\\Core.csproj"
             },
             "C:\\Code\\Blazor\\BugTracker\\Infrastructure\\Infrastructure.csproj": {
               "projectPath": "C:\\Code\\Blazor\\BugTracker\\Infrastructure\\Infrastructure.csproj"

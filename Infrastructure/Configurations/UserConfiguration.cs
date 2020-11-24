@@ -1,4 +1,5 @@
-﻿using Core.Models;
+﻿using BugTracker.Shared.Models;
+using Core.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 

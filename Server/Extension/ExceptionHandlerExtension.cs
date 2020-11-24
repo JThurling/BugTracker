@@ -1,5 +1,5 @@
 ﻿using System.Net;
-using Core.ErrorHandling;
+using BugTracker.Shared.ErrorHandling;
 using Core.Interfaces;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Diagnostics;

@@ -8,6 +8,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using BugTracker.Server.Extension;
 using BugTracker.Server.Hubs;
+using BugTracker.Shared.Models;
 using Core.Interfaces;
 using Core.Models;
 using Infrastructure.Data;

@@ -5,7 +5,7 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\Core\Core.csproj" />
+      <ProjectReference Include="..\Shared\BugTracker.Shared.csproj" />
     </ItemGroup>
     
     <ItemGroup>

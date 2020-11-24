@@ -4,8 +4,8 @@ C:\Code\Blazor\BugTracker\Infrastructure\bin\Debug\net5.0\Infrastructure.runtime
 C:\Code\Blazor\BugTracker\Infrastructure\bin\Debug\net5.0\Infrastructure.dll
 C:\Code\Blazor\BugTracker\Infrastructure\bin\Debug\net5.0\ref\Infrastructure.dll
 C:\Code\Blazor\BugTracker\Infrastructure\bin\Debug\net5.0\Infrastructure.pdb
-C:\Code\Blazor\BugTracker\Infrastructure\bin\Debug\net5.0\Core.dll
-C:\Code\Blazor\BugTracker\Infrastructure\bin\Debug\net5.0\Core.pdb
+C:\Code\Blazor\BugTracker\Infrastructure\bin\Debug\net5.0\BugTracker.Shared.dll
+C:\Code\Blazor\BugTracker\Infrastructure\bin\Debug\net5.0\BugTracker.Shared.pdb
 C:\Code\Blazor\BugTracker\Infrastructure\obj\Debug\net5.0\Infrastructure.csprojAssemblyReference.cache
 C:\Code\Blazor\BugTracker\Infrastructure\obj\Debug\net5.0\Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
 C:\Code\Blazor\BugTracker\Infrastructure\obj\Debug\net5.0\Infrastructure.AssemblyInfoInputs.cache

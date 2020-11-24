@@ -14,7 +14,6 @@ using System.Reflection;
 [assembly: Microsoft.AspNetCore.Mvc.Testing.WebApplicationFactoryContentRootAttribute("BugTracker.Client, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", "C:\\Code\\Blazor\\BugTracker\\Client", "BugTracker.Client.csproj", "0")]
 [assembly: Microsoft.AspNetCore.Mvc.Testing.WebApplicationFactoryContentRootAttribute("BugTracker.Server, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", "C:\\Code\\Blazor\\BugTracker\\Server", "BugTracker.Server.csproj", "0")]
 [assembly: Microsoft.AspNetCore.Mvc.Testing.WebApplicationFactoryContentRootAttribute("BugTracker.Shared, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", "C:\\Code\\Blazor\\BugTracker\\Shared", "BugTracker.Shared.csproj", "0")]
-[assembly: Microsoft.AspNetCore.Mvc.Testing.WebApplicationFactoryContentRootAttribute("Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", "C:\\Code\\Blazor\\BugTracker\\Core", "Core.csproj", "0")]
 [assembly: Microsoft.AspNetCore.Mvc.Testing.WebApplicationFactoryContentRootAttribute("Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", "C:\\Code\\Blazor\\BugTracker\\Infrastructure", "Infrastructure.csproj", "0")]
 [assembly: System.Reflection.AssemblyCompanyAttribute("BugTrackerTestSuite")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]

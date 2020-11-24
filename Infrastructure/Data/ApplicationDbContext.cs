@@ -1,4 +1,5 @@
-﻿using Core.Models;
+﻿using BugTracker.Shared.Models;
+using Core.Models;
 using Core.Models.Bugs;
 using IdentityServer4.EntityFramework.Options;
 using Infrastructure.Configurations;

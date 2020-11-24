@@ -3104,7 +3104,6 @@
           "Microsoft.AspNetCore.Components.WebAssembly.Authentication": "5.0.0",
           "Microsoft.AspNetCore.SignalR.Client": "5.0.0",
           "Microsoft.Extensions.Http": "5.0.0",
-          "Serilog": "2.10.0",
           "System.Net.Http.Json": "5.0.0"
         },
         "runtime": {
@@ -3116,38 +3115,22 @@
       },
       "BugTracker.Shared/1.0.0": {
         "dependencies": {
-          "Serilog": "2.10.0"
-        },
-        "runtime": {
-          "BugTracker.Shared.dll": {}
-        },
-        "compile": {
-          "BugTracker.Shared.dll": {}
-        }
-      },
-      "Core/1.0.0": {
-        "dependencies": {
-          "Microsoft.AspNetCore.ApiAuthorization.IdentityServer": "5.0.0",
-          "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore": "5.0.0",
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "5.0.0",
-          "Microsoft.AspNetCore.Identity.UI": "5.0.0",
-          "Microsoft.EntityFrameworkCore.Sqlite": "5.0.0",
-          "Microsoft.EntityFrameworkCore.Tools": "5.0.0",
           "Newtonsoft.Json": "12.0.3",
           "Serilog": "2.10.0",
           "Serilog.Sinks.Console": "3.1.1",
           "Serilog.Sinks.File": "4.1.0"
         },
         "runtime": {
-          "Core.dll": {}
+          "BugTracker.Shared.dll": {}
         },
         "compile": {
-          "Core.dll": {}
+          "BugTracker.Shared.dll": {}
         }
       },
       "Infrastructure/1.0.0": {
         "dependencies": {
-          "Core": "1.0.0",
+          "BugTracker.Shared": "1.0.0",
           "Microsoft.AspNetCore.ApiAuthorization.IdentityServer": "5.0.0",
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "5.0.0",
           "Microsoft.EntityFrameworkCore": "5.0.0",
@@ -6575,11 +6558,6 @@
       "sha512": ""
     },
     "BugTracker.Shared/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "Core/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

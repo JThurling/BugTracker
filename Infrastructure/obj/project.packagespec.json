@@ -19,8 +19,8 @@
     "frameworks": {
       "netcoreapp5.0": {
         "projectReferences": {
-          "C:\\Code\\Blazor\\BugTracker\\Core\\Core.csproj": {
-            "projectPath": "C:\\Code\\Blazor\\BugTracker\\Core\\Core.csproj"
+          "C:\\Code\\Blazor\\BugTracker\\Shared\\BugTracker.Shared.csproj": {
+            "projectPath": "C:\\Code\\Blazor\\BugTracker\\Shared\\BugTracker.Shared.csproj"
           }
         }
       }

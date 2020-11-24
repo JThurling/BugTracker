@@ -1,0 +1,39 @@
+﻿@page "/Tasks"
+@using Core.Models.Output.Bug
+@inject HttpClient Http
+
+@if (_tasks == null)
+{
+    <p>Loading...</p>
+}
+else
+{
+    <div class="col-12">
+        Tasks
+    </div>
+    <div class="col-12">
+        <Card Bordered="false" Style="width:100%;" Class="shadow-sm">
+            <Body>
+                <p>Card content</p>
+            </Body>
+        </Card>
+    </div>
+}
+
+@code {
+    private BugOutput[] _tasks;
+
+    protected override async Task OnInitializedAsync()
+    {
+        try
+        {
+            _tasks = await Http.GetFromJsonAsync<BugOutput[]>("api/bug");
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e);
+            throw;
+        }
+    }
+
+}

@@ -13,7 +13,6 @@ using System.Reflection;
 [assembly: Microsoft.AspNetCore.Identity.UI.UIFrameworkAttribute("Bootstrap4")]
 [assembly: Microsoft.AspNetCore.Mvc.Testing.WebApplicationFactoryContentRootAttribute("BugTracker.Client, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", "C:\\Code\\Blazor\\BugTracker\\Client", "BugTracker.Client.csproj", "0")]
 [assembly: Microsoft.AspNetCore.Mvc.Testing.WebApplicationFactoryContentRootAttribute("BugTracker.Shared, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", "C:\\Code\\Blazor\\BugTracker\\Shared", "BugTracker.Shared.csproj", "0")]
-[assembly: Microsoft.AspNetCore.Mvc.Testing.WebApplicationFactoryContentRootAttribute("Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", "C:\\Code\\Blazor\\BugTracker\\Core", "Core.csproj", "0")]
 [assembly: Microsoft.AspNetCore.Mvc.Testing.WebApplicationFactoryContentRootAttribute("Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", "C:\\Code\\Blazor\\BugTracker\\Infrastructure", "Infrastructure.csproj", "0")]
 [assembly: Microsoft.Extensions.Configuration.UserSecrets.UserSecretsIdAttribute("BugTracker.Server-4B5D200D-3167-4BFD-9F34-AF86D9A3556D")]
 [assembly: System.Reflection.AssemblyCompanyAttribute("BugTracker.Server")]
