@@ -112,7 +112,7 @@ using Core.Models.Output.Bug;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 23 "C:\Code\Blazor\BugTracker\Client\Pages\Tasks.razor"
+#line 38 "C:\Code\Blazor\BugTracker\Client\Pages\Tasks.razor"
        
     private BugOutput[] _tasks;
 

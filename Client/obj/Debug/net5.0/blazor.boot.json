@@ -223,13 +223,13 @@
       "mscorlib.dll": "sha256-i0zXLOX1XZekwNvRdQK9WDvRWKFggLp7KDCnvMrn+HQ=",
       "netstandard.dll": "sha256-4QNBIB4DMwj82CYd96oFrTh3fcrmyaDjtQ2dBTyWz7Q=",
       "System.Private.CoreLib.dll": "sha256-5Zk+rN+j5FbFEQJdT8YR2O0i6KWpvrERsaPZCv69DmI=",
-      "BugTracker.Shared.dll": "sha256-bOM5Oj5JYfSrsWnrFIhoclT1vjgWtsljy+SegLY0nsY=",
-      "BugTracker.Client.dll": "sha256-\/mczdzdOPlDri7Pyt1Wq\/Z8oDA1\/29Tnb4Qm3p8jgcU="
+      "BugTracker.Shared.dll": "sha256-djvGJqkhvkKuCMG\/XY7GDPHVWBkLhTN3zN+ER0z\/mdE=",
+      "BugTracker.Client.dll": "sha256-eXgUWL+Ddb72h\/KutTZUYlI4aGaQ5998RBt74Fu6owo="
     },
     "lazyAssembly": null,
     "pdb": {
-      "BugTracker.Shared.pdb": "sha256-9MK8YGUPb\/f2uh6fosXUxo8fcjJNHw1VJ4qAvDV6yFs=",
-      "BugTracker.Client.pdb": "sha256-sebb9Tjkh8yBnCUct5nUhmkaz1SAm9zk53mJN6aIqjg="
+      "BugTracker.Shared.pdb": "sha256-xR5vJNZXttBYGRZ7Xe8M+FQs7gZsYoSW1mAurDa7pVY=",
+      "BugTracker.Client.pdb": "sha256-33r8bPxWLZ81GWg0bkz7\/ok8DSBHjlvCePnlwg2g5T8="
     },
     "runtime": {
       "dotnet.timezones.blat": "sha256-2ldEe2K8ARFKSIBsv+Hr3iNQzq9qh1H\/dwdu2r+AIyY=",

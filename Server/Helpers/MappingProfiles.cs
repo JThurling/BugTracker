@@ -1,4 +1,6 @@
 ﻿using AutoMapper;
+using BugTracker.Shared.Models;
+using BugTracker.Shared.Models.Output.Users;
 using Core.Models.Bugs;
 using Core.Models.Inputs.Bug;
 using Core.Models.Output.Bug;
@@ -17,6 +19,7 @@ namespace BugTracker.Server.Helpers
             CreateMap<Comments, CommentOutput>();
             CreateMap<SubTaskInput, SubTask>();
             CreateMap<SubTask, SubTaskOutput>();
+            CreateMap<ApplicationUser, UserOutput>();
         }
     }
 }
