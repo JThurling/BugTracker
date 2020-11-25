@@ -4,7 +4,9 @@
 
 @if (_tasks == null)
 {
-    <p>Loading...</p>
+    <div class="col-12 bg-white shadow-sm">
+        <Skeleton Active="true"></Skeleton>
+    </div>
 }
 else
 {
@@ -50,5 +52,4 @@ else
             throw;
         }
     }
-
 }

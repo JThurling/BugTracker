@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using BugTracker.Server.Helpers;
+using BugTracker.Shared.Interfaces.Services.User;
 using Core.Interfaces.Services;
 using Core.Models;
 using Infrastructure.Services;
@@ -15,6 +16,7 @@ namespace BugTracker.Server.Extension
             service.AddAutoMapper(typeof(MappingProfiles));
             service.AddScoped<ICommentService, CommentService>();
             service.AddScoped<ISubService, SubService>();
+            service.AddScoped<IUserService, UserService>();
         }
     }
 }

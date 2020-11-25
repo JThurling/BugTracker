@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using AutoMapper;
+using BugTracker.Shared.Interfaces.Services.User;
 using BugTracker.Shared.Models;
 using BugTracker.Shared.Models.Output.Users;
 using Microsoft.AspNetCore.Identity;
@@ -14,11 +15,13 @@ namespace BugTracker.Server.Controllers
     {
         private readonly UserManager<ApplicationUser> _users;
         private readonly IMapper _mapper;
+        private readonly IUserService _userService;
 
-        public UserManagerController(UserManager<ApplicationUser> users, IMapper mapper)
+        public UserManagerController(UserManager<ApplicationUser> users, IMapper mapper, IUserService userService)
         {
             _users = users;
             _mapper = mapper;
+            _userService = userService;
         }
 
         [HttpGet]
@@ -34,9 +37,11 @@ namespace BugTracker.Server.Controllers
         [HttpDelete]
         public async Task<ActionResult<ApplicationUser>> DeleteUser([FromQuery] Guid id)
         {
-            var user = _users.FindByIdAsync(id.ToString());
+            var user = await _userService.FindUser(id);
 
-            return Ok(user);
+            var map = _mapper.Map<UserOutput>(user);
+
+            return Ok(map);
         }
     }
 }
