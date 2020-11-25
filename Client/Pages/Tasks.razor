@@ -10,31 +10,36 @@
 }
 else
 {
-    <div class="col-12">
-        Tasks
+    <div class="col-12 mb-3">
+        <h3>Tasks</h3>
     </div>
     <div class="col-12">
         @foreach (var task in _tasks)
         {
-            <Card Bordered="false" Style="width:100%;" Class="shadow-sm mb-2">
-                <Body>
-                <div class="row">
-                    <p>@task.Bug</p>
-                    @if (!task.SubTasks.Count.Equals(null))
-                    {
-                        <Tag Color="red">@task.SubTasks.Count</Tag>
-                    }
+            <div class="shadow-sm mb-2 card border-0">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-4">
+                            @task.Bug
+                        </div>
+                        <div class="col-6">
+                            <Tag Color="blue">Subtask: @task.SubTasks.Count</Tag>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="col-12">
+                        <Timeline>
+                            @foreach (var subtask in task.SubTasks)
+                            {
+                                <TimelineItem>@subtask.Task</TimelineItem>
+                            }
+                        </Timeline>
+                    </div>
                 </div>
-                <div class="col-12">
-                    @foreach (var subtask in task.SubTasks)
-                    {
-                        <p>@subtask.Task</p>
-                    }
-                </div>
-                </Body>
-            </Card>
+            </div>
         }
     </div>
+    <Tag Color="red">Subtasks:</Tag>
 }
 
 @code {
@@ -52,4 +57,11 @@ else
             throw;
         }
     }
+
 }
+
+<style type="text/css">
+      .row-no-padding,.row-no-padding div,.row-no-padding div button{
+           padding: 0 !important;
+      }
+</style>
