@@ -112,7 +112,7 @@ using Core.Models.Output.Bug;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 45 "C:\Code\Blazor\BugTracker\Client\Pages\Tasks.razor"
+#line 53 "C:\Code\Blazor\BugTracker\Client\Pages\Tasks.razor"
        
     private BugOutput[] _tasks;
 
@@ -127,6 +127,13 @@ using Core.Models.Output.Bug;
             Console.WriteLine(e);
             throw;
         }
+    }
+
+    public bool Display = true;
+
+    public void DisplaySubTasks()
+    {
+        Display = !Display;
     }
 
 

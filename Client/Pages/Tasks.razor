@@ -20,26 +20,34 @@ else
                 <div class="card-body">
                     <div class="row">
                         <div class="col-4">
-                            @task.Bug
+                            <h6>@task.Bug</h6>
                         </div>
-                        <div class="col-6">
-                            <Tag Color="blue">Subtask: @task.SubTasks.Count</Tag>
+                        <div class="col-4">
+                            <a @onclick="DisplaySubTasks"><Tag Style="cursor: pointer" Color="blue">Subtask: @task.SubTasks.Count</Tag></a>
+                        </div>
+                        <div class="col-2">
+                            <Icon Type="flag" Style="font-size: 1.7em" Class="text-danger" Theme="outline"/>
                         </div>
                     </div>
-                    <hr>
-                    <div class="col-12">
-                        <Timeline>
-                            @foreach (var subtask in task.SubTasks)
-                            {
-                                <TimelineItem>@subtask.Task</TimelineItem>
-                            }
-                        </Timeline>
-                    </div>
+                    @if (Display)
+                    {
+                        <hr>
+                        <div class="">
+                            <h6>Subtasks</h6>
+                            <div class="col-12 pt-3 pl-3">
+                                <Timeline>
+                                    @foreach (var subtask in task.SubTasks)
+                                    {
+                                        <TimelineItem>@subtask.Task</TimelineItem>
+                                    }
+                                </Timeline>
+                            </div>
+                        </div>
+                    }
                 </div>
             </div>
         }
     </div>
-    <Tag Color="red">Subtasks:</Tag>
 }
 
 @code {
@@ -56,6 +64,13 @@ else
             Console.WriteLine(e);
             throw;
         }
+    }
+
+    public bool Display = true;
+
+    public void DisplaySubTasks()
+    {
+        Display = !Display;
     }
 
 }
