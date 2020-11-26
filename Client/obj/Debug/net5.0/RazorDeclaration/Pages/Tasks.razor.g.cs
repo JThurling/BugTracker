@@ -110,6 +110,13 @@ using Core.Models.Output.Bug;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 3 "C:\Code\Blazor\BugTracker\Client\Pages\Tasks.razor"
+using Core.Models.Bugs;
+
+#line default
+#line hidden
+#nullable disable
     [Microsoft.AspNetCore.Components.RouteAttribute("/Tasks")]
     public partial class Tasks : Microsoft.AspNetCore.Components.ComponentBase
     {
@@ -119,7 +126,7 @@ using Core.Models.Output.Bug;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 191 "C:\Code\Blazor\BugTracker\Client\Pages\Tasks.razor"
+#line 276 "C:\Code\Blazor\BugTracker\Client\Pages\Tasks.razor"
        
     bool _visible = false;
     bool _create = false;
@@ -171,6 +178,19 @@ using Core.Models.Output.Bug;
         _create = false;
     }
 
+    //PopOver
+    private RenderFragment _content =
+        
+
+#line default
+#line hidden
+#nullable disable
+        (__builder2) => {
+            __builder2.AddMarkupContent(0, "<div>\r\n            <div class=\"d-flex justify-content-between\">\r\n                <p>Delete</p>\r\n                <Icon Class=\"text-danger mt-1\" Type=\"delete\" Theme=\"outline\" Style=\"cursor: pointer\"></Icon>\r\n            </div>\r\n        </div>");
+        }
+#nullable restore
+#line 334 "C:\Code\Blazor\BugTracker\Client\Pages\Tasks.razor"
+              ;
 
 
 #line default

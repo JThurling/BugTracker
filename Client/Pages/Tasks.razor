@@ -1,5 +1,6 @@
 ﻿@page "/Tasks"
 @using Core.Models.Output.Bug
+@using Core.Models.Bugs
 @inject HttpClient Http
 
 @if (_tasks == null)
@@ -49,7 +50,7 @@ else
                                 }
                                 else
                                 {
-                                    <Icon Type="flag" Style="font-size: 1.7em" Class="text-secondary" Theme="outline"/>
+                                    <Icon Type="flag" Style="font-size: 1.7em" Class="text-primary" Theme="outline"/>
                                 }
                             </Tooltip>
                         </div>
@@ -63,19 +64,66 @@ else
                         <div class="col-2">
                             <p style="font-weight: bold">Deadline: @task.Deadline</p>
                         </div>
+
+                        <div class="col-1 offset-1">
+                            <Popover Placement="PlacementType.Left" ContentTemplate="@_content" Title="Extra Option" Trigger="@(new AntDesign.TriggerType[] {AntDesign.TriggerType.Click})">
+                                <Icon Type="ellipsis" Style="font-size: 1.7em; cursor: pointer" Class="text-secondary" Theme="outline"/>
+                            </Popover>
+                        </div>
+
+
                     </div>
                     @if ((Display && task.SubTasks.Count > 0) && Array.IndexOf(_tasks, task) == Index)
                     {
                         <hr>
-                        <div class="">
+                        <div>
                             <h6>Subtasks</h6>
-                            <div class="col-12 pt-3 pl-3">
-                                <Timeline>
-                                    @foreach (var subtask in task.SubTasks)
+                            <div class="col-12 p-3">
+                                @foreach (var subtask in task.SubTasks)
+                                {
+                                    @if (subtask.Priority == "High")
                                     {
-                                        <TimelineItem>@subtask.Task</TimelineItem>
+                                        <div class="border-left border-danger pl-3 pt-3 pr-3">
+                                            <div class="d-flex justify-content-between">
+                                                <p>@subtask.Task</p>
+                                                <Tooltip Placement="@PlacementType.Right" Title="@subtask.Priority">
+                                                    <Icon Type="flag" Style="font-size: 1.7em" Class="text-danger" Theme="outline"/>
+                                                </Tooltip>
+                                                <Popover Placement="PlacementType.Left" ContentTemplate="@_content" Title="Extra Option" Trigger="@(new AntDesign.TriggerType[] {AntDesign.TriggerType.Click})">
+                                                    <Icon Type="ellipsis" Style="font-size: 1.7em; cursor: pointer" Class="text-secondary" Theme="outline"/>
+                                                </Popover>
+                                            </div>
+                                        </div>
                                     }
-                                </Timeline>
+                                    else if (subtask.Priority == "Medium")
+                                    {
+                                        <div class="border-left border-warning pl-3 pt-3 pr-3">
+                                            <div class="d-flex justify-content-between">
+                                                <p>@subtask.Task</p>
+                                                <Tooltip Placement="@PlacementType.Right" Title="@subtask.Priority">
+                                                    <Icon Type="flag" Style="font-size: 1.7em" Class="text-warning" Theme="outline"/>
+                                                </Tooltip>
+                                                <Popover Placement="PlacementType.Left" ContentTemplate="@_content" Title="Extra Option" Trigger="@(new AntDesign.TriggerType[] {AntDesign.TriggerType.Click})">
+                                                    <Icon Type="ellipsis" Style="font-size: 1.7em; cursor: pointer" Class="text-secondary" Theme="outline"/>
+                                                </Popover>
+                                            </div>
+                                        </div>
+                                    }
+                                    else
+                                    {
+                                        <div class="border-left border-primary pl-3 pt-3 pr-3">
+                                            <div class="d-flex justify-content-between">
+                                                <p>@subtask.Task</p>
+                                                <Tooltip Placement="@PlacementType.Right" Title="@subtask.Priority">
+                                                    <Icon Type="flag" Style="font-size: 1.7em" Class="text-primary" Theme="outline"/>
+                                                </Tooltip>
+                                                <Popover Placement="PlacementType.Left" ContentTemplate="@_content" Title="Extra Option" Trigger="@(new AntDesign.TriggerType[] {AntDesign.TriggerType.Click})">
+                                                    <Icon Type="ellipsis" Style="font-size: 1.7em; cursor: pointer" Class="text-secondary" Theme="outline"/>
+                                                </Popover>
+                                            </div>
+                                        </div>
+                                    }
+                                }
                             </div>
                         </div>
                     }
@@ -100,39 +148,76 @@ else
        Width="1320">
     <div class="row">
         <div class="col-6">
-            <div class="d-flex justify-content-between">
+            <div class="d-flex justify-content-between mb-3">
                 <h4>@Bug.Bug</h4>
-                <Button Type="dashed" Class="shadow-sm" Danger>
+                @if (Bug.Priority == "High")
+                {
+                    <div class="shadow-sm btn-danger btn">
                         @Bug.Priority
-                </Button>
+                    </div>
+                }
+                else if (Bug.Priority == "Medium")
+                {
+                    <div class="shadow-sm btn-warning btn">
+                        @Bug.Priority
+                    </div>
+                }
+                else
+                {
+                    <div class="shadow-sm btn-primary btn">
+                        @Bug.Priority
+                    </div>
+                }
+
             </div>
-            <textarea placeholder="Description" class="border-0 foc" style="width: 100%; height: 18vh">
+            <textarea placeholder="Description" class="foc border-0" style="width: 100%; height: 18vh;">
 
             </textarea>
-            <div class="bg-light p-5 mt-3" style="border-radius: 5px">
+            <div class="mt-3" style="border-radius: 5px">
                 @foreach (var subtask in Bug.SubTasks)
                 {
-                    <Timeline>
-                        <TimelineItem>
+                    @if (subtask.Priority == "High")
+                    {
+                        <div class="border-left border-danger pl-3 pt-3 pr-3">
                             <div class="d-flex justify-content-between">
                                 <p>@subtask.Task</p>
-                                <Tooltip Placement="@PlacementType.TopLeft" Title="@subtask.Priority">
-                                    @if (subtask.Priority == "High")
-                                    {
-                                        <Icon Type="flag" Style="font-size: 1.7em" Class="text-danger" Theme="outline"/>
-                                    }
-                                    else if (subtask.Priority == "Medium")
-                                    {
-                                        <Icon Type="flag" Style="font-size: 1.7em" Class="text-warning" Theme="outline"/>
-                                    }
-                                    else
-                                    {
-                                        <Icon Type="flag" Style="font-size: 1.7em" Class="text-secondary" Theme="outline"/>
-                                    }
+                                <Tooltip Placement="@PlacementType.Right" Title="@subtask.Priority">
+                                    <Icon Type="flag" Style="font-size: 1.7em" Class="text-danger" Theme="outline"/>
                                 </Tooltip>
+                                <Popover Placement="PlacementType.Right" ContentTemplate="@_content" Title="Extra Option" Trigger="@(new AntDesign.TriggerType[] {AntDesign.TriggerType.Click})">
+                                    <Icon Type="ellipsis" Style="font-size: 1.7em; cursor: pointer" Class="text-secondary" Theme="outline"/>
+                                </Popover>
                             </div>
-                        </TimelineItem>
-                    </Timeline>
+                        </div>
+                    }
+                    else if (subtask.Priority == "Medium")
+                    {
+                        <div class="border-left border-warning pl-3 pt-3 pr-3">
+                            <div class="d-flex justify-content-between">
+                                <p>@subtask.Task</p>
+                                <Tooltip Placement="@PlacementType.Right" Title="@subtask.Priority">
+                                    <Icon Type="flag" Style="font-size: 1.7em" Class="text-warning" Theme="outline"/>
+                                </Tooltip>
+                                <Popover Placement="PlacementType.Right" ContentTemplate="@_content" Title="Extra Option" Trigger="@(new AntDesign.TriggerType[] {AntDesign.TriggerType.Click})">
+                                    <Icon Type="ellipsis" Style="font-size: 1.7em; cursor: pointer" Class="text-secondary" Theme="outline"/>
+                                </Popover>
+                            </div>
+                        </div>
+                    }
+                    else
+                    {
+                        <div class="border-left border-primary pl-3 pt-3 pr-3">
+                            <div class="d-flex justify-content-between">
+                                <p>@subtask.Task</p>
+                                <Tooltip Placement="@PlacementType.Right" Title="@subtask.Priority">
+                                    <Icon Type="flag" Style="font-size: 1.7em" Class="text-primary" Theme="outline"/>
+                                </Tooltip>
+                                <Popover Placement="PlacementType.Right" ContentTemplate="@_content" Title="Extra Option" Trigger="@(new AntDesign.TriggerType[] {AntDesign.TriggerType.Click})">
+                                    <Icon Type="ellipsis" Style="font-size: 1.7em; cursor: pointer" Class="text-secondary" Theme="outline"/>
+                                </Popover>
+                            </div>
+                        </div>
+                    }
                 }
             </div>
         </div>
@@ -239,12 +324,24 @@ else
         _create = false;
     }
 
+    //PopOver
+    private RenderFragment _content =
+        @<div>
+            <div class="d-flex justify-content-between">
+                <p>Delete</p>
+                <Icon Class="text-danger mt-1" Type="delete" Theme="outline" Style="cursor: pointer"/>
+            </div>
+        </div>;
 
 }
 
 <style>
     .overflow {
         overflow-y: scroll;
+    }
+
+    .border-left{
+        border-left: 3px;
     }
 
     ::-webkit-scrollbar{
@@ -267,4 +364,6 @@ else
     .foc:focus {
         border: none;
     }
+
+
 </style>

@@ -225,12 +225,12 @@
       "netstandard.dll": "sha256-4QNBIB4DMwj82CYd96oFrTh3fcrmyaDjtQ2dBTyWz7Q=",
       "System.Private.CoreLib.dll": "sha256-5Zk+rN+j5FbFEQJdT8YR2O0i6KWpvrERsaPZCv69DmI=",
       "BugTracker.Shared.dll": "sha256-rALG0bCEvxO1YYVZ6igGQCWrfSmguHtW+m\/kBtji\/4g=",
-      "BugTracker.Client.dll": "sha256-jQTmANtbaJ6BTDMcksyF\/R2s2JDShjFDqHT4fIpryp0="
+      "BugTracker.Client.dll": "sha256-NB1gREEXoRTazroD7PCmWQg2dintrFC65c3HXE8MWxY="
     },
     "lazyAssembly": null,
     "pdb": {
       "BugTracker.Shared.pdb": "sha256-C5N0ciYH3JBAxc09jMgzCayUzy\/ego83zD+vTc+M9K4=",
-      "BugTracker.Client.pdb": "sha256-mRA\/xg+Y8w5hOUdKuiyTw5bQJxhA7mfifRQ4ZanKEJQ="
+      "BugTracker.Client.pdb": "sha256-bOd3wWRZqv5ZIZEuC8L+oh23HZngyr122OIxSlxDU0k="
     },
     "runtime": {
       "dotnet.timezones.blat": "sha256-2ldEe2K8ARFKSIBsv+Hr3iNQzq9qh1H\/dwdu2r+AIyY=",
