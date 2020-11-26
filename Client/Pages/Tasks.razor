@@ -11,14 +11,14 @@
 else
 {
     <div class="col-12 mb-3">
-            <div style="background-color: #f0f2f5" class="d-flex justify-content-between p-1">
-                <div>
-                    <h3>Tasks</h3>
-                </div>
-                <div>
-                    <Button Class="shadow-sm" Icon="plus" Type="dashed" @onclick="OnCreate">New Task</Button>
-                </div>
+        <div style="background-color: #f0f2f5" class="d-flex justify-content-between p-1">
+            <div>
+                <h3>Tasks</h3>
             </div>
+            <div>
+                <Button Class="shadow-sm" Icon="plus" Type="dashed" @onclick="OnCreate">New Task</Button>
+            </div>
+        </div>
     </div>
     <div class="col-12">
         @foreach (var task in _tasks)
@@ -93,24 +93,62 @@ else
 
 </Modal>
 
-<Modal Title="@("Title")"
+<Modal Title="@($"Task")"
        Centered="true"
        Visible="@_visible"
        OnCancel="@HideModal"
        Width="1320">
     <div class="row">
         <div class="col-6">
-            <p>@Bug.Priority</p>
+            <div class="d-flex justify-content-between">
+                <h4>@Bug.Bug</h4>
+                <Button Type="dashed" Class="shadow-sm" Danger>
+                        @Bug.Priority
+                </Button>
+            </div>
+            <textarea placeholder="Description" class="border-0 foc" style="width: 100%; height: 18vh">
+
+            </textarea>
+            <div class="bg-light p-5 mt-3" style="border-radius: 5px">
+                @foreach (var subtask in Bug.SubTasks)
+                {
+                    <Timeline>
+                        <TimelineItem>
+                            <div class="d-flex justify-content-between">
+                                <p>@subtask.Task</p>
+                                <Tooltip Placement="@PlacementType.TopLeft" Title="@subtask.Priority">
+                                    @if (subtask.Priority == "High")
+                                    {
+                                        <Icon Type="flag" Style="font-size: 1.7em" Class="text-danger" Theme="outline"/>
+                                    }
+                                    else if (subtask.Priority == "Medium")
+                                    {
+                                        <Icon Type="flag" Style="font-size: 1.7em" Class="text-warning" Theme="outline"/>
+                                    }
+                                    else
+                                    {
+                                        <Icon Type="flag" Style="font-size: 1.7em" Class="text-secondary" Theme="outline"/>
+                                    }
+                                </Tooltip>
+                            </div>
+                        </TimelineItem>
+                    </Timeline>
+                }
+            </div>
         </div>
         <div class="col-6" style="height: 70vh">
 
-            <div style="height: 45vh" class="bg-light p-3">
-                <h6>Comment</h6>
+            <div id="scroller" style="height: 45vh" class="bg-light p-3 overflow">
+                <h6 style="position: fixed; margin-top: -5px" class="bg-light p-2">Comment</h6>
+                <br class="mb-2">
                 @foreach (var comment in Bug.Comments)
                 {
-                    <p>@comment.CommentTime</p>
-                    <p>@comment.Comment</p>
+                    <div class="bg-dark text-white p-3 mb-2" style="border-radius: 5px">
+                        <p>@comment.CommentTime</p>
+                        <p>@comment.Comment</p>
+                    </div>
                 }
+                <div id="anchor"></div>
             </div>
 
             <div style="height: 20vh">
@@ -203,3 +241,30 @@ else
 
 
 }
+
+<style>
+    .overflow {
+        overflow-y: scroll;
+    }
+
+    ::-webkit-scrollbar{
+        width: 5px;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: rgba(53,53,53,0.5);
+      border-radius: 10px;
+    }
+
+    #anchor {
+        overflow-anchor: auto
+    }
+
+    #scroller * {
+      overflow-anchor: none;
+    }
+
+    .foc:focus {
+        border: none;
+    }
+</style>
