@@ -90,6 +90,13 @@ using AntDesign;
 #line hidden
 #nullable disable
 #nullable restore
+#line 13 "C:\Code\Blazor\BugTracker\Client\_Imports.razor"
+using Blazored.TextEditor;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
 #line 1 "C:\Code\Blazor\BugTracker\Client\Shared\LoginDisplay.razor"
 using Microsoft.AspNetCore.Components.Authorization;
 

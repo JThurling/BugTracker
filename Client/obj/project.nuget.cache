@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "a5leuoO0sYFm4rgpJht+Wg1r3bkmtzkP9NJUSStoM8v40fjlZNkVpuG1qSn6MQKEcAiTLd+4Gtb3Tgy/J4qZhA==",
+  "dgSpecHash": "ze7mBumgerL6jqa+kjq+d79/OJU/8texme4lwAZ7hQfT9WlVt/Cv1A8r5ixcX2Z2UxuIr8FQN6rM0LTxsPvQnA==",
   "success": true,
   "projectFilePath": "C:\\Code\\Blazor\\BugTracker\\Client\\BugTracker.Client.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\jthur\\.nuget\\packages\\antdesign\\0.4.1\\antdesign.0.4.1.nupkg.sha512",
+    "C:\\Users\\jthur\\.nuget\\packages\\blazored.texteditor\\1.0.3\\blazored.texteditor.1.0.3.nupkg.sha512",
     "C:\\Users\\jthur\\.nuget\\packages\\microsoft.aspnetcore.authorization\\5.0.0\\microsoft.aspnetcore.authorization.5.0.0.nupkg.sha512",
     "C:\\Users\\jthur\\.nuget\\packages\\microsoft.aspnetcore.components\\5.0.0\\microsoft.aspnetcore.components.5.0.0.nupkg.sha512",
     "C:\\Users\\jthur\\.nuget\\packages\\microsoft.aspnetcore.components.analyzers\\5.0.0\\microsoft.aspnetcore.components.analyzers.5.0.0.nupkg.sha512",

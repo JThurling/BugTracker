@@ -1,12 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "mYc1baooqCekxyhMQz67N1UD8E2rVnNYOSaUjeERmmWIhpI7F6/ysL4vVh3mOR2oVdRDatli6L1wuYbFmgULuQ==",
+  "dgSpecHash": "kTfvrbql/j3F6wVdyZPhW3P5SCl1cSKUf/k4m3RgW/Q3bIzBLsRkY4s+nWtRqyTdTDwxAoe2zFQO08zLOcG4+w==",
   "success": true,
   "projectFilePath": "C:\\Code\\Blazor\\BugTracker\\Server\\BugTracker.Server.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\jthur\\.nuget\\packages\\antdesign\\0.4.1\\antdesign.0.4.1.nupkg.sha512",
     "C:\\Users\\jthur\\.nuget\\packages\\automapper\\10.1.0\\automapper.10.1.0.nupkg.sha512",
     "C:\\Users\\jthur\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\8.1.0\\automapper.extensions.microsoft.dependencyinjection.8.1.0.nupkg.sha512",
+    "C:\\Users\\jthur\\.nuget\\packages\\blazored.texteditor\\1.0.3\\blazored.texteditor.1.0.3.nupkg.sha512",
     "C:\\Users\\jthur\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\jthur\\.nuget\\packages\\identitymodel\\4.4.0\\identitymodel.4.4.0.nupkg.sha512",
     "C:\\Users\\jthur\\.nuget\\packages\\identityserver4\\4.1.0\\identityserver4.4.1.0.nupkg.sha512",

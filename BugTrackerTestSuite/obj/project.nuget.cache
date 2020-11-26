@@ -1,12 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "tZ0ePoQhdZL8TgZND9JiVDQr9HStCgrG6rHAuUX9caG3DIrWKKPe+aRRtQxWJtCish54k3pYcPU+ydHkmyQj7Q==",
+  "dgSpecHash": "vBsaIzPwDL+fsUFallSfZP+Alplg2Ic2SWYw06B5wg/PC3zI/jp6WYaml0HF8ExRkYZwiMqtxY+Zn8YwtQpFng==",
   "success": true,
   "projectFilePath": "C:\\Code\\Blazor\\BugTracker\\BugTrackerTestSuite\\BugTrackerTestSuite.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\jthur\\.nuget\\packages\\antdesign\\0.4.1\\antdesign.0.4.1.nupkg.sha512",
     "C:\\Users\\jthur\\.nuget\\packages\\automapper\\10.1.0\\automapper.10.1.0.nupkg.sha512",
     "C:\\Users\\jthur\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\8.1.0\\automapper.extensions.microsoft.dependencyinjection.8.1.0.nupkg.sha512",
+    "C:\\Users\\jthur\\.nuget\\packages\\blazored.texteditor\\1.0.3\\blazored.texteditor.1.0.3.nupkg.sha512",
     "C:\\Users\\jthur\\.nuget\\packages\\castle.core\\4.4.0\\castle.core.4.4.0.nupkg.sha512",
     "C:\\Users\\jthur\\.nuget\\packages\\coverlet.collector\\1.3.0\\coverlet.collector.1.3.0.nupkg.sha512",
     "C:\\Users\\jthur\\.nuget\\packages\\fluentassertions\\5.10.3\\fluentassertions.5.10.3.nupkg.sha512",

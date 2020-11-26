@@ -11,7 +11,14 @@
 else
 {
     <div class="col-12 mb-3">
-        <h3>Tasks</h3>
+            <div style="background-color: #f0f2f5" class="d-flex justify-content-between p-1">
+                <div>
+                    <h3>Tasks</h3>
+                </div>
+                <div>
+                    <Button Class="shadow-sm" Icon="plus" Type="dashed" @onclick="OnCreate">New Task</Button>
+                </div>
+            </div>
     </div>
     <div class="col-12">
         @foreach (var task in _tasks)
@@ -20,17 +27,23 @@ else
                 <div class="card-body">
                     <div class="row">
                         <div class="col-2">
-                            <h6 @onclick="() => ShowModal(task)">@task.Bug</h6>
+                            <h6 style="cursor: pointer" @onclick="() => ShowModal(task)">@task.Bug</h6>
                         </div>
                         <div class="col-2">
-                            <a @onclick="() => DisplaySubTasks(task)"><Tag Style="cursor: pointer" Color="blue">Subtask: @task.SubTasks.Count</Tag></a>
+                            @if (task.SubTasks.Count > 0)
+                            {
+                                <a @onclick="() => DisplaySubTasks(task)">
+                                    <Tag Style="cursor: pointer" Color="blue">Subtask: @task.SubTasks.Count</Tag>
+                                </a>
+                            }
                         </div>
                         <div class="col-2">
                             <Tooltip Placement="@PlacementType.TopLeft" Title="@task.Priority">
                                 @if (task.Priority == "High")
                                 {
                                     <Icon Type="flag" Style="font-size: 1.7em" Class="text-danger" Theme="outline"/>
-                                } else if (task.Priority == "Medium")
+                                }
+                                else if (task.Priority == "Medium")
                                 {
                                     <Icon Type="flag" Style="font-size: 1.7em" Class="text-warning" Theme="outline"/>
                                 }
@@ -72,18 +85,78 @@ else
     </div>
 }
 
+<Modal Title="@("Create a new task")"
+       Visible="@_create"
+       Centered="true"
+       OnCancel="CancelCreation"
+       Width="1320">
+
+</Modal>
+
 <Modal Title="@("Title")"
        Centered="true"
        Visible="@_visible"
        OnCancel="@HideModal"
        Width="1320">
-    <p>@Bug.Priority</p>
+    <div class="row">
+        <div class="col-6">
+            <p>@Bug.Priority</p>
+        </div>
+        <div class="col-6" style="height: 70vh">
+
+            <div style="height: 45vh" class="bg-light p-3">
+                <h6>Comment</h6>
+                @foreach (var comment in Bug.Comments)
+                {
+                    <p>@comment.CommentTime</p>
+                    <p>@comment.Comment</p>
+                }
+            </div>
+
+            <div style="height: 20vh">
+                <BlazoredTextEditor @ref="@QuillHtml">
+                    <ToolbarContent>
+                        <select class="ql-header">
+                            <option selected=""></option>
+                            <option value="1"></option>
+                            <option value="2"></option>
+                            <option value="3"></option>
+                            <option value="4"></option>
+                            <option value="5"></option>
+                        </select>
+                        <span class="ql-formats">
+                            <button class="ql-bold"></button>
+                            <button class="ql-italic"></button>
+                            <button class="ql-underline"></button>
+                            <button class="ql-strike"></button>
+                        </span>
+                        <span class="ql-formats">
+                            <select class="ql-color"></select>
+                            <select class="ql-background"></select>
+                        </span>
+                        <span class="ql-formats">
+                            <button class="ql-list" value="ordered"></button>
+                            <button class="ql-list" value="bullet"></button>
+                        </span>
+                        <span class="ql-formats">
+                            <button class="ql-link"></button>
+                        </span>
+                    </ToolbarContent>
+                    <EditorContent>
+                    </EditorContent>
+                </BlazoredTextEditor>
+            </div>
+        </div>
+    </div>
 </Modal>
 
 @code {
     bool _visible = false;
+    bool _create = false;
     private BugOutput[] _tasks;
     private BugOutput Bug { get; set; }
+    BlazoredTextEditor QuillHtml;
+    private uint _offsetTop = 10;
 
     protected override async Task OnInitializedAsync()
     {
@@ -98,7 +171,7 @@ else
         }
     }
 
-    public bool Display = true;
+    public bool Display = false;
     public int Index;
 
     public void DisplaySubTasks(BugOutput bug)
@@ -117,5 +190,16 @@ else
     {
         _visible = false;
     }
+
+    private void OnCreate()
+    {
+        _create = true;
+    }
+
+    private void CancelCreation()
+    {
+        _create = false;
+    }
+
 
 }

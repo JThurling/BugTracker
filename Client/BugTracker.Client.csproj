@@ -12,6 +12,7 @@
     <PackageReference Include="System.Net.Http.Json" Version="5.0.0" />
     <PackageReference Include="AntDesign" Version="0.4.1" />
     <PackageReference Include="Microsoft.AspNetCore.SignalR.Client" Version="5.0.0" />
+    <PackageReference Include="Blazored.TextEditor" Version="1.0.3"/>
   </ItemGroup>
 
   <ItemGroup>

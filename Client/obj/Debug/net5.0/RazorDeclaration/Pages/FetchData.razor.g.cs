@@ -97,6 +97,13 @@ using AntDesign;
 #line hidden
 #nullable disable
 #nullable restore
+#line 13 "C:\Code\Blazor\BugTracker\Client\_Imports.razor"
+using Blazored.TextEditor;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
 #line 2 "C:\Code\Blazor\BugTracker\Client\Pages\FetchData.razor"
 using Microsoft.AspNetCore.Authorization;
 

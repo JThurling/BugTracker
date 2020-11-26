@@ -97,6 +97,13 @@ using AntDesign;
 #line hidden
 #nullable disable
 #nullable restore
+#line 13 "C:\Code\Blazor\BugTracker\Client\_Imports.razor"
+using Blazored.TextEditor;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
 #line 2 "C:\Code\Blazor\BugTracker\Client\Pages\Tasks.razor"
 using Core.Models.Output.Bug;
 
@@ -112,11 +119,14 @@ using Core.Models.Output.Bug;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 83 "C:\Code\Blazor\BugTracker\Client\Pages\Tasks.razor"
+#line 153 "C:\Code\Blazor\BugTracker\Client\Pages\Tasks.razor"
        
     bool _visible = false;
+    bool _create = false;
     private BugOutput[] _tasks;
     private BugOutput Bug { get; set; }
+    BlazoredTextEditor QuillHtml;
+    private uint _offsetTop = 10;
 
     protected override async Task OnInitializedAsync()
     {
@@ -131,7 +141,7 @@ using Core.Models.Output.Bug;
         }
     }
 
-    public bool Display = true;
+    public bool Display = false;
     public int Index;
 
     public void DisplaySubTasks(BugOutput bug)
@@ -150,6 +160,17 @@ using Core.Models.Output.Bug;
     {
         _visible = false;
     }
+
+    private void OnCreate()
+    {
+        _create = true;
+    }
+
+    private void CancelCreation()
+    {
+        _create = false;
+    }
+
 
 
 #line default

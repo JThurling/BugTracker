@@ -8,6 +8,7 @@
   "resources": {
     "assembly": {
       "AntDesign.dll": "sha256-xl4QkKLUNpbqWf4jkK2ofbfvwZy0HAg6S2dXVB9qm2A=",
+      "Blazored.TextEditor.dll": "sha256-p6KpADdpScfksgGgA5pIqZ21ViYtQxWPLg7FZrtbNB0=",
       "Microsoft.AspNetCore.Authorization.dll": "sha256-7P3zpzQg+C+ukPy7fBNY8UW+Ro+yLdvnT6d4iP13FuE=",
       "Microsoft.AspNetCore.Components.dll": "sha256-DcQM9qPOeEovJp5noXBIvP95Jd0SlaW6509d3Ml6xQ4=",
       "Microsoft.AspNetCore.Components.Authorization.dll": "sha256-RETzcaqJB7uXmSqtgbNeKNNc5YC\/Ux+Ud\/XI\/\/VCR38=",
@@ -224,12 +225,12 @@
       "netstandard.dll": "sha256-4QNBIB4DMwj82CYd96oFrTh3fcrmyaDjtQ2dBTyWz7Q=",
       "System.Private.CoreLib.dll": "sha256-5Zk+rN+j5FbFEQJdT8YR2O0i6KWpvrERsaPZCv69DmI=",
       "BugTracker.Shared.dll": "sha256-rALG0bCEvxO1YYVZ6igGQCWrfSmguHtW+m\/kBtji\/4g=",
-      "BugTracker.Client.dll": "sha256-TzxAQtasa3Lwh1ojlb\/rxtvaz5FSwaiEAMmyu1FNoM8="
+      "BugTracker.Client.dll": "sha256-S1t\/ZUnnj4Zplhd6u6VEJXZMnpwFuYBZHN+VLxL72pA="
     },
     "lazyAssembly": null,
     "pdb": {
       "BugTracker.Shared.pdb": "sha256-C5N0ciYH3JBAxc09jMgzCayUzy\/ego83zD+vTc+M9K4=",
-      "BugTracker.Client.pdb": "sha256-yw4oiki62Lj\/GEARHgDNwUHhqhLHSOcwiaZYbXsIbfY="
+      "BugTracker.Client.pdb": "sha256-iVsuhAswFudKIWUr1hFpN8Djufm+xq6jX52wTjUjb4Y="
     },
     "runtime": {
       "dotnet.timezones.blat": "sha256-2ldEe2K8ARFKSIBsv+Hr3iNQzq9qh1H\/dwdu2r+AIyY=",

@@ -24,6 +24,7 @@ C:\Code\Blazor\BugTracker\Server\bin\Debug\net5.0\BugTracker.Server.Views.pdb
 C:\Code\Blazor\BugTracker\Server\bin\Debug\net5.0\AntDesign.dll
 C:\Code\Blazor\BugTracker\Server\bin\Debug\net5.0\AutoMapper.dll
 C:\Code\Blazor\BugTracker\Server\bin\Debug\net5.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+C:\Code\Blazor\BugTracker\Server\bin\Debug\net5.0\Blazored.TextEditor.dll
 C:\Code\Blazor\BugTracker\Server\bin\Debug\net5.0\Humanizer.dll
 C:\Code\Blazor\BugTracker\Server\bin\Debug\net5.0\IdentityModel.dll
 C:\Code\Blazor\BugTracker\Server\bin\Debug\net5.0\IdentityServer4.dll
