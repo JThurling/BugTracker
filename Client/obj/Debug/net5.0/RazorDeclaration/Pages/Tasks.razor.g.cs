@@ -112,9 +112,11 @@ using Core.Models.Output.Bug;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 53 "C:\Code\Blazor\BugTracker\Client\Pages\Tasks.razor"
+#line 83 "C:\Code\Blazor\BugTracker\Client\Pages\Tasks.razor"
        
+    bool _visible = false;
     private BugOutput[] _tasks;
+    private BugOutput Bug { get; set; }
 
     protected override async Task OnInitializedAsync()
     {
@@ -130,10 +132,23 @@ using Core.Models.Output.Bug;
     }
 
     public bool Display = true;
+    public int Index;
 
-    public void DisplaySubTasks()
+    public void DisplaySubTasks(BugOutput bug)
     {
         Display = !Display;
+        Index = Array.IndexOf(_tasks, bug);
+    }
+
+    private void ShowModal(BugOutput bug)
+    {
+        _visible = true;
+        Bug = bug;
+    }
+
+    private void HideModal()
+    {
+        _visible = false;
     }
 
 

@@ -19,17 +19,39 @@ else
             <div class="shadow-sm mb-2 card border-0">
                 <div class="card-body">
                     <div class="row">
-                        <div class="col-4">
-                            <h6>@task.Bug</h6>
-                        </div>
-                        <div class="col-4">
-                            <a @onclick="DisplaySubTasks"><Tag Style="cursor: pointer" Color="blue">Subtask: @task.SubTasks.Count</Tag></a>
+                        <div class="col-2">
+                            <h6 @onclick="() => ShowModal(task)">@task.Bug</h6>
                         </div>
                         <div class="col-2">
-                            <Icon Type="flag" Style="font-size: 1.7em" Class="text-danger" Theme="outline"/>
+                            <a @onclick="() => DisplaySubTasks(task)"><Tag Style="cursor: pointer" Color="blue">Subtask: @task.SubTasks.Count</Tag></a>
+                        </div>
+                        <div class="col-2">
+                            <Tooltip Placement="@PlacementType.TopLeft" Title="@task.Priority">
+                                @if (task.Priority == "High")
+                                {
+                                    <Icon Type="flag" Style="font-size: 1.7em" Class="text-danger" Theme="outline"/>
+                                } else if (task.Priority == "Medium")
+                                {
+                                    <Icon Type="flag" Style="font-size: 1.7em" Class="text-warning" Theme="outline"/>
+                                }
+                                else
+                                {
+                                    <Icon Type="flag" Style="font-size: 1.7em" Class="text-secondary" Theme="outline"/>
+                                }
+                            </Tooltip>
+                        </div>
+                        <div class="col-2">
+                            <div class="row">
+                                <Icon Type="comment" Style="font-size: 1.7em" Theme="outline"/>
+                                <p style="font-weight: bold">@task.Comments.Count</p>
+                            </div>
+                        </div>
+
+                        <div class="col-2">
+                            <p style="font-weight: bold">Deadline: @task.Deadline</p>
                         </div>
                     </div>
-                    @if (Display)
+                    @if ((Display && task.SubTasks.Count > 0) && Array.IndexOf(_tasks, task) == Index)
                     {
                         <hr>
                         <div class="">
@@ -50,8 +72,18 @@ else
     </div>
 }
 
+<Modal Title="@("Title")"
+       Centered="true"
+       Visible="@_visible"
+       OnCancel="@HideModal"
+       Width="1320">
+    <p>@Bug.Priority</p>
+</Modal>
+
 @code {
+    bool _visible = false;
     private BugOutput[] _tasks;
+    private BugOutput Bug { get; set; }
 
     protected override async Task OnInitializedAsync()
     {
@@ -67,16 +99,23 @@ else
     }
 
     public bool Display = true;
+    public int Index;
 
-    public void DisplaySubTasks()
+    public void DisplaySubTasks(BugOutput bug)
     {
         Display = !Display;
+        Index = Array.IndexOf(_tasks, bug);
+    }
+
+    private void ShowModal(BugOutput bug)
+    {
+        _visible = true;
+        Bug = bug;
+    }
+
+    private void HideModal()
+    {
+        _visible = false;
     }
 
 }
-
-<style type="text/css">
-      .row-no-padding,.row-no-padding div,.row-no-padding div button{
-           padding: 0 !important;
-      }
-</style>
