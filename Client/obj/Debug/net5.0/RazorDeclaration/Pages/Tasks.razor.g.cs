@@ -177,7 +177,6 @@ using Core.Models.Bugs;
     {
         _create = false;
     }
-
     //PopOver
     private RenderFragment _content =
         
@@ -189,7 +188,7 @@ using Core.Models.Bugs;
             __builder2.AddMarkupContent(0, "<div>\r\n            <div class=\"d-flex justify-content-between\">\r\n                <p>Delete</p>\r\n                <Icon Class=\"text-danger mt-1\" Type=\"delete\" Theme=\"outline\" Style=\"cursor: pointer\"></Icon>\r\n            </div>\r\n        </div>");
         }
 #nullable restore
-#line 334 "C:\Code\Blazor\BugTracker\Client\Pages\Tasks.razor"
+#line 333 "C:\Code\Blazor\BugTracker\Client\Pages\Tasks.razor"
               ;
 
 
