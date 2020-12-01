@@ -103,29 +103,8 @@ using Blazored.TextEditor;
 #line default
 #line hidden
 #nullable disable
-#nullable restore
-#line 2 "C:\Code\Blazor\BugTracker\Client\Pages\Tasks.razor"
-using Core.Models.Output.Bug;
-
-#line default
-#line hidden
-#nullable disable
-#nullable restore
-#line 3 "C:\Code\Blazor\BugTracker\Client\Pages\Tasks.razor"
-using Core.Models.Bugs;
-
-#line default
-#line hidden
-#nullable disable
-#nullable restore
-#line 4 "C:\Code\Blazor\BugTracker\Client\Pages\Tasks.razor"
-using Core.Models.Inputs.Bug;
-
-#line default
-#line hidden
-#nullable disable
-    [Microsoft.AspNetCore.Components.RouteAttribute("/Tasks")]
-    public partial class Tasks : Microsoft.AspNetCore.Components.ComponentBase
+    [Microsoft.AspNetCore.Components.RouteAttribute("/Users")]
+    public partial class Users : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
         protected override void BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder __builder)
@@ -133,65 +112,11 @@ using Core.Models.Inputs.Bug;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 285 "C:\Code\Blazor\BugTracker\Client\Pages\Tasks.razor"
+#line 16 "C:\Code\Blazor\BugTracker\Client\Pages\Users.razor"
        
-    bool _visible = false;
-    bool _create = false;
-    private BugOutput[] _tasks;
-    private BugOutput Bug { get; set; }
-    BlazoredTextEditor QuillHtml;
-    private uint _offsetTop = 10;
-
-    protected override async Task OnInitializedAsync()
+    protected override Task OnInitializedAsync()
     {
-        try
-        {
-            _tasks = await Http.GetFromJsonAsync<BugOutput[]>("api/bug");
-        }
-        catch (Exception e)
-        {
-            Console.WriteLine(e);
-            throw;
-        }
-    }
-
-    public bool Display = false;
-    public int Index;
-
-    public void DisplaySubTasks(BugOutput bug)
-    {
-        Display = !Display;
-        Index = Array.IndexOf(_tasks, bug);
-    }
-
-    private void ShowModal(BugOutput bug)
-    {
-        _visible = true;
-        Bug = bug;
-    }
-
-    private void HideModal()
-    {
-        _visible = false;
-    }
-
-    private void OnCreate()
-    {
-        _create = true;
-    }
-
-    private void CancelCreation()
-    {
-        _create = false;
-    }
-
-    //PopOver
-    private bool _options = false;
-
-    private void openOption(BugOutput bug)
-    {
-        _options = true;
-        Bug = bug;
+        return base.OnInitializedAsync();
     }
 
 

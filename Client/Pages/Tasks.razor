@@ -1,6 +1,7 @@
 ﻿@page "/Tasks"
 @using Core.Models.Output.Bug
 @using Core.Models.Bugs
+@using Core.Models.Inputs.Bug
 @inject HttpClient Http
 
 @if (_tasks == null)
@@ -66,9 +67,17 @@ else
                         </div>
 
                         <div class="col-1 offset-1">
-                            <Popover Placement="PlacementType.Left" ContentTemplate="@_content" Title="Extra Option" Trigger="@(new AntDesign.TriggerType[] {AntDesign.TriggerType.Click})">
-                                <Icon Type="ellipsis" Style="font-size: 1.7em; cursor: pointer" Class="text-secondary" Theme="outline"/>
-                            </Popover>
+                            <Icon Type="ellipsis" Style="font-size: 1.7em; cursor: pointer" Class="text-secondary" Theme="outline" @onclick="() => openOption(task)"/>
+                            <Drawer Width="640" Closable="true" Visible="_options" Placement="right" Title='($"{task.Bug}")' OnClose="() => _options = false">
+                                <div class="row col-12">
+                                    <Input Placeholder="Basic usage" Value="task.Bug"/>
+                                </div>
+                                <br>
+                                <div class="row col-12">
+                                    <Button Class="shadow-sm mr-3" Icon="delete" Type="dashed" Danger>Delete</Button>
+                                    <Button Class="shadow-sm" Icon="plus" Type="dashed" >Update</Button>
+                                </div>
+                            </Drawer>
                         </div>
 
 
@@ -89,7 +98,7 @@ else
                                                 <Tooltip Placement="@PlacementType.Right" Title="@subtask.Priority">
                                                     <Icon Type="flag" Style="font-size: 1.7em" Class="text-danger" Theme="outline"/>
                                                 </Tooltip>
-                                                <Popover Placement="PlacementType.Left" ContentTemplate="@_content" Title="Extra Option" Trigger="@(new AntDesign.TriggerType[] {AntDesign.TriggerType.Click})">
+                                                <Popover Placement="PlacementType.Left" Title="Extra Option" Trigger="@(new AntDesign.TriggerType[] {AntDesign.TriggerType.Click})">
                                                     <Icon Type="ellipsis" Style="font-size: 1.7em; cursor: pointer" Class="text-secondary" Theme="outline"/>
                                                 </Popover>
                                             </div>
@@ -103,7 +112,7 @@ else
                                                 <Tooltip Placement="@PlacementType.Right" Title="@subtask.Priority">
                                                     <Icon Type="flag" Style="font-size: 1.7em" Class="text-warning" Theme="outline"/>
                                                 </Tooltip>
-                                                <Popover Placement="PlacementType.Left" ContentTemplate="@_content" Title="Extra Option" Trigger="@(new AntDesign.TriggerType[] {AntDesign.TriggerType.Click})">
+                                                <Popover Placement="PlacementType.Left" Title="Extra Option" Trigger="@(new AntDesign.TriggerType[] {AntDesign.TriggerType.Click})">
                                                     <Icon Type="ellipsis" Style="font-size: 1.7em; cursor: pointer" Class="text-secondary" Theme="outline"/>
                                                 </Popover>
                                             </div>
@@ -117,7 +126,7 @@ else
                                                 <Tooltip Placement="@PlacementType.Right" Title="@subtask.Priority">
                                                     <Icon Type="flag" Style="font-size: 1.7em" Class="text-primary" Theme="outline"/>
                                                 </Tooltip>
-                                                <Popover Placement="PlacementType.Left" ContentTemplate="@_content" Title="Extra Option" Trigger="@(new AntDesign.TriggerType[] {AntDesign.TriggerType.Click})">
+                                                <Popover Placement="PlacementType.Left" Title="Extra Option" Trigger="@(new AntDesign.TriggerType[] {AntDesign.TriggerType.Click})">
                                                     <Icon Type="ellipsis" Style="font-size: 1.7em; cursor: pointer" Class="text-secondary" Theme="outline"/>
                                                 </Popover>
                                             </div>
@@ -184,7 +193,7 @@ else
                                 <Tooltip Placement="@PlacementType.Right" Title="@subtask.Priority">
                                     <Icon Type="flag" Style="font-size: 1.7em" Class="text-danger" Theme="outline"/>
                                 </Tooltip>
-                                <Popover Placement="PlacementType.Right" ContentTemplate="@_content" Title="Extra Option" Trigger="@(new AntDesign.TriggerType[] {AntDesign.TriggerType.Click})">
+                                <Popover Placement="PlacementType.Right" Title="Extra Option" Trigger="@(new AntDesign.TriggerType[] {AntDesign.TriggerType.Click})">
                                     <Icon Type="ellipsis" Style="font-size: 1.7em; cursor: pointer" Class="text-secondary" Theme="outline"/>
                                 </Popover>
                             </div>
@@ -198,7 +207,7 @@ else
                                 <Tooltip Placement="@PlacementType.Right" Title="@subtask.Priority">
                                     <Icon Type="flag" Style="font-size: 1.7em" Class="text-warning" Theme="outline"/>
                                 </Tooltip>
-                                <Popover Placement="PlacementType.Right" ContentTemplate="@_content" Title="Extra Option" Trigger="@(new AntDesign.TriggerType[] {AntDesign.TriggerType.Click})">
+                                <Popover Placement="PlacementType.Right" Title="Extra Option" Trigger="@(new AntDesign.TriggerType[] {AntDesign.TriggerType.Click})">
                                     <Icon Type="ellipsis" Style="font-size: 1.7em; cursor: pointer" Class="text-secondary" Theme="outline"/>
                                 </Popover>
                             </div>
@@ -212,7 +221,7 @@ else
                                 <Tooltip Placement="@PlacementType.Right" Title="@subtask.Priority">
                                     <Icon Type="flag" Style="font-size: 1.7em" Class="text-primary" Theme="outline"/>
                                 </Tooltip>
-                                <Popover Placement="PlacementType.Right" ContentTemplate="@_content" Title="Extra Option" Trigger="@(new AntDesign.TriggerType[] {AntDesign.TriggerType.Click})">
+                                <Popover Placement="PlacementType.Right" Title="Extra Option" Trigger="@(new AntDesign.TriggerType[] {AntDesign.TriggerType.Click})">
                                     <Icon Type="ellipsis" Style="font-size: 1.7em; cursor: pointer" Class="text-secondary" Theme="outline"/>
                                 </Popover>
                             </div>
@@ -323,17 +332,17 @@ else
     {
         _create = false;
     }
+
     //PopOver
-    private RenderFragment _content =
-        @<div>
-            <div class="d-flex justify-content-between">
-                <p>Delete</p>
-                <Icon Class="text-danger mt-1" Type="delete" Theme="outline" Style="cursor: pointer"/>
-            </div>
-        </div>;
+    private bool _options = false;
+
+    private void openOption(BugOutput bug)
+    {
+        _options = true;
+        Bug = bug;
+    }
 
 }
-
 
 
 <style>
