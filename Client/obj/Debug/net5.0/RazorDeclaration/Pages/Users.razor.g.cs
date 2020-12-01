@@ -103,6 +103,13 @@ using Blazored.TextEditor;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 2 "C:\Code\Blazor\BugTracker\Client\Pages\Users.razor"
+using BugTracker.Shared.Models.Output.Users;
+
+#line default
+#line hidden
+#nullable disable
     [Microsoft.AspNetCore.Components.RouteAttribute("/Users")]
     public partial class Users : Microsoft.AspNetCore.Components.ComponentBase
     {
@@ -112,11 +119,13 @@ using Blazored.TextEditor;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 16 "C:\Code\Blazor\BugTracker\Client\Pages\Users.razor"
+#line 35 "C:\Code\Blazor\BugTracker\Client\Pages\Users.razor"
        
-    protected override Task OnInitializedAsync()
+    private UserOutput[] _users;
+
+    protected override async Task OnInitializedAsync()
     {
-        return base.OnInitializedAsync();
+        _users = await Http.GetFromJsonAsync<UserOutput[]>("api/UserManager");
     }
 
 

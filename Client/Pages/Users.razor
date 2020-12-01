@@ -1,22 +1,43 @@
 ﻿@page "/Users"
+@using BugTracker.Shared.Models.Output.Users
 @inject HttpClient Http
 <h3>Users</h3>
 
-<div class="col-12 row">
-    <div class="col-6 bg-warning">
+<div class="col-12 row bg-white shadow-sm" style="border-radius: 10px">
+    <div class="col-6 p-3">
         <h6>Company</h6>
-        <p>t</p>
+
     </div>
-    <div class="col-6 bg-danger">
+    <div class="col-6 p-3">
         <h6>Users For Company</h6>
-        <p>t</p>
+        @if (_users == null)
+        {
+            <p>Loading</p>
+        }
+        else
+        {
+            @foreach (var user in _users)
+            {
+                <div class="d-flex justify-content-between">
+                    <div class="row p-3">
+                        <p style="font-weight: bold" class="mr-3">Username: </p>
+                        <p>@user.Username</p>
+                    </div>
+                    <div>
+                        <Icon Type="ellipsis" Style="font-size: 1.7em" Theme="outline"/>
+                    </div>
+                </div>
+            }
+        }
     </div>
 </div>
 
 @code {
-    protected override Task OnInitializedAsync()
+    private UserOutput[] _users;
+
+    protected override async Task OnInitializedAsync()
     {
-        return base.OnInitializedAsync();
+        _users = await Http.GetFromJsonAsync<UserOutput[]>("api/UserManager");
     }
 
 }
