@@ -133,7 +133,7 @@ using Core.Models.Inputs.Bug;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 309 "C:\Code\Blazor\BugTracker\Client\Pages\Tasks.razor"
+#line 282 "C:\Code\Blazor\BugTracker\Client\Pages\Tasks.razor"
        
     bool _visible = false;
     bool _create = false;
