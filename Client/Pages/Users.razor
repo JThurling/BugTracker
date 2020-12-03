@@ -1,5 +1,6 @@
 ﻿@page "/Users"
 @using BugTracker.Shared.Models.Output.Users
+@using BugTracker.Shared.Models
 @inject HttpClient Http
 <h3>Users</h3>
 
@@ -12,7 +13,13 @@
         <h6>Users For Company</h6>
         @if (_users == null)
         {
-            <p>Loading</p>
+            <Skeleton Active="true"></Skeleton>
+
+            <Skeleton Active="true"></Skeleton>
+
+            <Skeleton Active="true"></Skeleton>
+
+            <Skeleton Active="true"></Skeleton>
         }
         else
         {
@@ -24,7 +31,17 @@
                         <p>@user.Username</p>
                     </div>
                     <div>
-                        <Icon Type="ellipsis" Style="font-size: 1.7em" Theme="outline"/>
+                        <Icon Type="ellipsis" Style="font-size: 1.7em; cursor: pointer;" Theme="outline" @onclick="() => openOption(user)"/>
+                        <Drawer Width="640" Closable="true" Visible="_options" Placement="right" Title='($"{user.Username}")' OnClose="() => _options = false">
+                            <div class="row col-12">
+                                <Input Placeholder="Basic usage" Value="user.Username"/>
+                            </div>
+                            <br>
+                            <div class="row col-12">
+                                <Button Class="shadow-sm mr-3" Icon="delete" Type="dashed" Danger>Delete</Button>
+                                <Button Class="shadow-sm" Icon="plus" Type="dashed">Update</Button>
+                            </div>
+                        </Drawer>
                     </div>
                 </div>
             }
@@ -35,9 +52,19 @@
 @code {
     private UserOutput[] _users;
 
+    private UserOutput _user;
+
+    private bool _options = false;
+
     protected override async Task OnInitializedAsync()
     {
         _users = await Http.GetFromJsonAsync<UserOutput[]>("api/UserManager");
+    }
+
+    private void openOption(UserOutput user)
+    {
+        _user = user;
+        _options = true;
     }
 
 }

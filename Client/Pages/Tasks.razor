@@ -75,7 +75,7 @@ else
                                 <br>
                                 <div class="row col-12">
                                     <Button Class="shadow-sm mr-3" Icon="delete" Type="dashed" Danger>Delete</Button>
-                                    <Button Class="shadow-sm" Icon="plus" Type="dashed" >Update</Button>
+                                    <Button Class="shadow-sm" Icon="plus" Type="dashed">Update</Button>
                                 </div>
                             </Drawer>
                         </div>
@@ -98,9 +98,17 @@ else
                                                 <Tooltip Placement="@PlacementType.Right" Title="@subtask.Priority">
                                                     <Icon Type="flag" Style="font-size: 1.7em" Class="text-danger" Theme="outline"/>
                                                 </Tooltip>
-                                                <Popover Placement="PlacementType.Left" Title="Extra Option" Trigger="@(new AntDesign.TriggerType[] {AntDesign.TriggerType.Click})">
-                                                    <Icon Type="ellipsis" Style="font-size: 1.7em; cursor: pointer" Class="text-secondary" Theme="outline"/>
-                                                </Popover>
+                                                <Icon Type="ellipsis" Style="font-size: 1.7em; cursor: pointer;" Theme="outline" @onclick="() => openOption(subtask)"/>
+                                                <Drawer Width="640" Closable="true" Visible="_options" Placement="right" Title='($"{subtask.Task}")' OnClose="() => _options = false">
+                                                    <div class="row col-12">
+                                                        <Input Placeholder="Basic usage" Value="subtask.Task"/>
+                                                    </div>
+                                                    <br>
+                                                    <div class="row col-12">
+                                                        <Button Class="shadow-sm mr-3" Icon="delete" Type="dashed" Danger>Delete</Button>
+                                                        <Button Class="shadow-sm" Icon="plus" Type="dashed">Update</Button>
+                                                    </div>
+                                                </Drawer>
                                             </div>
                                         </div>
                                     }
@@ -112,9 +120,17 @@ else
                                                 <Tooltip Placement="@PlacementType.Right" Title="@subtask.Priority">
                                                     <Icon Type="flag" Style="font-size: 1.7em" Class="text-warning" Theme="outline"/>
                                                 </Tooltip>
-                                                <Popover Placement="PlacementType.Left" Title="Extra Option" Trigger="@(new AntDesign.TriggerType[] {AntDesign.TriggerType.Click})">
-                                                    <Icon Type="ellipsis" Style="font-size: 1.7em; cursor: pointer" Class="text-secondary" Theme="outline"/>
-                                                </Popover>
+                                                <Icon Type="ellipsis" Style="font-size: 1.7em; cursor: pointer;" Theme="outline" @onclick="() => openOption(subtask)"/>
+                                                <Drawer Width="640" Closable="true" Visible="_options" Placement="right" Title='($"{subtask.Task}")' OnClose="() => _options = false">
+                                                    <div class="row col-12">
+                                                        <Input Placeholder="Basic usage" Value="subtask.Task"/>
+                                                    </div>
+                                                    <br>
+                                                    <div class="row col-12">
+                                                        <Button Class="shadow-sm mr-3" Icon="delete" Type="dashed" Danger>Delete</Button>
+                                                        <Button Class="shadow-sm" Icon="plus" Type="dashed">Update</Button>
+                                                    </div>
+                                                </Drawer>
                                             </div>
                                         </div>
                                     }
@@ -126,9 +142,17 @@ else
                                                 <Tooltip Placement="@PlacementType.Right" Title="@subtask.Priority">
                                                     <Icon Type="flag" Style="font-size: 1.7em" Class="text-primary" Theme="outline"/>
                                                 </Tooltip>
-                                                <Popover Placement="PlacementType.Left" Title="Extra Option" Trigger="@(new AntDesign.TriggerType[] {AntDesign.TriggerType.Click})">
-                                                    <Icon Type="ellipsis" Style="font-size: 1.7em; cursor: pointer" Class="text-secondary" Theme="outline"/>
-                                                </Popover>
+                                                <Icon Type="ellipsis" Style="font-size: 1.7em; cursor: pointer;" Theme="outline" @onclick="() => openOption(subtask)"/>
+                                                <Drawer Width="640" Closable="true" Visible="_options" Placement="right" Title='($"{subtask.Task}")' OnClose="() => _options = false">
+                                                    <div class="row col-12">
+                                                        <Input Placeholder="Basic usage" Value="subtask.Task"/>
+                                                    </div>
+                                                    <br>
+                                                    <div class="row col-12">
+                                                        <Button Class="shadow-sm mr-3" Icon="delete" Type="dashed" Danger>Delete</Button>
+                                                        <Button Class="shadow-sm" Icon="plus" Type="dashed">Update</Button>
+                                                    </div>
+                                                </Drawer>
                                             </div>
                                         </div>
                                     }
@@ -287,6 +311,7 @@ else
     bool _create = false;
     private BugOutput[] _tasks;
     private BugOutput Bug { get; set; }
+    private SubTaskOutput SubTask { get; set; }
     BlazoredTextEditor QuillHtml;
     private uint _offsetTop = 10;
 
@@ -340,6 +365,12 @@ else
     {
         _options = true;
         Bug = bug;
+    }
+
+    private void openOption(SubTaskOutput task)
+    {
+        _options = true;
+        SubTask = task;
     }
 
 }

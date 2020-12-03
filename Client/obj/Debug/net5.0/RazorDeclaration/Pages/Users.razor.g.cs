@@ -110,6 +110,13 @@ using BugTracker.Shared.Models.Output.Users;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 3 "C:\Code\Blazor\BugTracker\Client\Pages\Users.razor"
+using BugTracker.Shared.Models;
+
+#line default
+#line hidden
+#nullable disable
     [Microsoft.AspNetCore.Components.RouteAttribute("/Users")]
     public partial class Users : Microsoft.AspNetCore.Components.ComponentBase
     {
@@ -119,13 +126,23 @@ using BugTracker.Shared.Models.Output.Users;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 35 "C:\Code\Blazor\BugTracker\Client\Pages\Users.razor"
+#line 52 "C:\Code\Blazor\BugTracker\Client\Pages\Users.razor"
        
     private UserOutput[] _users;
+
+    private UserOutput _user;
+
+    private bool _options = false;
 
     protected override async Task OnInitializedAsync()
     {
         _users = await Http.GetFromJsonAsync<UserOutput[]>("api/UserManager");
+    }
+
+    private void openOption(UserOutput user)
+    {
+        _user = user;
+        _options = true;
     }
 
 

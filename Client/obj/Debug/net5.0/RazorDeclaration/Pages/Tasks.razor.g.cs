@@ -133,12 +133,13 @@ using Core.Models.Inputs.Bug;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 285 "C:\Code\Blazor\BugTracker\Client\Pages\Tasks.razor"
+#line 309 "C:\Code\Blazor\BugTracker\Client\Pages\Tasks.razor"
        
     bool _visible = false;
     bool _create = false;
     private BugOutput[] _tasks;
     private BugOutput Bug { get; set; }
+    private SubTaskOutput SubTask { get; set; }
     BlazoredTextEditor QuillHtml;
     private uint _offsetTop = 10;
 
@@ -192,6 +193,12 @@ using Core.Models.Inputs.Bug;
     {
         _options = true;
         Bug = bug;
+    }
+
+    private void openOption(SubTaskOutput task)
+    {
+        _options = true;
+        SubTask = task;
     }
 
 
