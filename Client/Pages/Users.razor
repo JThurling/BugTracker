@@ -1,5 +1,6 @@
 ﻿@page "/Users"
 @using BugTracker.Shared.Models.Output.Users
+@inject DrawerService DrawerService
 @inject MessageService Message;
 @inject HttpClient Http
 <h3>Users</h3>
@@ -31,27 +32,30 @@
                     </div>
                     <div>
                         <Icon Type="ellipsis" Style="font-size: 1.7em; cursor: pointer;" Theme="outline" @onclick="() => openOption(user)"/>
-                        <Drawer Width="640" Closable="true" Visible="_options" Placement="right" Title='($"{user.Username}")' OnClose="() => _options = false">
-                            <div class="row col-12">
-                                <Input Placeholder="Basic usage" Value="user.Username"/>
-                            </div>
-                            <br>
-                            <div class="row col-12">
-                                <Button Class="shadow-sm mr-3" Icon="delete" Type="dashed" @onclick="() => onDelete(user)" Danger>Delete</Button>
-                                <Button Class="shadow-sm" Icon="plus" Type="dashed">Update</Button>
-                            </div>
-                        </Drawer>
                     </div>
                 </div>
             }
         }
     </div>
 </div>
+@if (User != null)
+{
+    <Drawer Width="640" Closable="true" Visible="_options" Placement="right" Title='($"Test")' OnClose="() => _options = false">
+        <div class="row col-12">
+            <Input Placeholder="Basic usage" Value="User.Username"/>
+        </div>
+        <br>
+        <div class="row col-12">
+            <Button Class="shadow-sm mr-3" Icon="delete" Type="dashed" @onclick="() => onDelete(User)" Danger>Delete</Button>
+            <Button Class="shadow-sm" Icon="plus" Type="dashed">Update</Button>
+        </div>
+    </Drawer>
+}
 
 @code {
     private UserOutput[] _users;
 
-    private UserOutput _user;
+    private UserOutput User { get; set; }
 
     private bool _options = false;
 
@@ -62,7 +66,7 @@
 
     private void openOption(UserOutput user)
     {
-        _user = user;
+        User = user;
         _options = true;
     }
 

@@ -119,11 +119,11 @@ using BugTracker.Shared.Models.Output.Users;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 51 "C:\Code\Blazor\BugTracker\Client\Pages\Users.razor"
+#line 55 "C:\Code\Blazor\BugTracker\Client\Pages\Users.razor"
        
     private UserOutput[] _users;
 
-    private UserOutput _user;
+    private UserOutput User { get; set; }
 
     private bool _options = false;
 
@@ -134,7 +134,7 @@ using BugTracker.Shared.Models.Output.Users;
 
     private void openOption(UserOutput user)
     {
-        _user = user;
+        User = user;
         _options = true;
     }
 
@@ -149,6 +149,7 @@ using BugTracker.Shared.Models.Output.Users;
 #nullable disable
         [global::Microsoft.AspNetCore.Components.InjectAttribute] private HttpClient Http { get; set; }
         [global::Microsoft.AspNetCore.Components.InjectAttribute] private MessageService Message { get; set; }
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private DrawerService DrawerService { get; set; }
     }
 }
 #pragma warning restore 1591
