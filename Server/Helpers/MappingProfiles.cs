@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using BugTracker.Shared.Models;
+using BugTracker.Shared.Models.Inputs;
 using BugTracker.Shared.Models.Output.Users;
 using Core.Models.Bugs;
 using Core.Models.Inputs.Bug;
@@ -20,6 +21,8 @@ namespace BugTracker.Server.Helpers
             CreateMap<SubTaskInput, SubTask>();
             CreateMap<SubTask, SubTaskOutput>();
             CreateMap<ApplicationUser, UserOutput>();
+            CreateMap<UserInput, ApplicationUser>()
+                .ForMember(d => d.UserName, o => o.MapFrom(m => m.Email));
         }
     }
 }

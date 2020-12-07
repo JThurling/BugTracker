@@ -2,6 +2,7 @@
 using System.Threading.Tasks;
 using BugTracker.Shared.Interfaces.Services.User;
 using BugTracker.Shared.Models;
+using BugTracker.Shared.Models.Inputs;
 using Microsoft.AspNetCore.Identity;
 
 namespace Infrastructure.Services
@@ -28,6 +29,15 @@ namespace Infrastructure.Services
 
             if (result.Succeeded) return 1;
             return 0;
+        }
+
+        public async Task<ApplicationUser> CreateUser(ApplicationUser user, UserInput input)
+        {
+            var result = await _users.CreateAsync(user, input.Password);
+
+            if (result.Succeeded) return user;
+
+            return null;
         }
     }
 }
