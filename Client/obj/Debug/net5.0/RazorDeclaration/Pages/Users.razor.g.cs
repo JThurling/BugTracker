@@ -110,13 +110,6 @@ using BugTracker.Shared.Models.Output.Users;
 #line default
 #line hidden
 #nullable disable
-#nullable restore
-#line 3 "C:\Code\Blazor\BugTracker\Client\Pages\Users.razor"
-using BugTracker.Shared.Models;
-
-#line default
-#line hidden
-#nullable disable
     [Microsoft.AspNetCore.Components.RouteAttribute("/Users")]
     public partial class Users : Microsoft.AspNetCore.Components.ComponentBase
     {
@@ -126,7 +119,7 @@ using BugTracker.Shared.Models;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 52 "C:\Code\Blazor\BugTracker\Client\Pages\Users.razor"
+#line 51 "C:\Code\Blazor\BugTracker\Client\Pages\Users.razor"
        
     private UserOutput[] _users;
 
@@ -145,11 +138,17 @@ using BugTracker.Shared.Models;
         _options = true;
     }
 
+    private async void onDelete(UserOutput user)
+    {
+        var result = await Http.DeleteAsync($"api/usermanager?id={user.Id}");
+    }
+
 
 #line default
 #line hidden
 #nullable disable
         [global::Microsoft.AspNetCore.Components.InjectAttribute] private HttpClient Http { get; set; }
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private MessageService Message { get; set; }
     }
 }
 #pragma warning restore 1591

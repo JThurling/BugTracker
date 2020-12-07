@@ -35,13 +35,15 @@ namespace BugTracker.Server.Controllers
         }
 
         [HttpDelete]
-        public async Task<ActionResult<ApplicationUser>> DeleteUser([FromQuery] Guid id)
+        public async Task<ActionResult<string>> DeleteUser([FromQuery] Guid id)
         {
             var user = await _userService.FindUser(id);
 
-            var map = _mapper.Map<UserOutput>(user);
+            var result = await _userService.DeleteUser(user);
 
-            return Ok(map);
+            if (result.Equals(0)) return BadRequest("Something went wrong please try again later.");
+
+            return Ok("You have successfully removed the user.");
         }
     }
 }

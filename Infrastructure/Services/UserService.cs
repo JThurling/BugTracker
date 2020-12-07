@@ -21,5 +21,13 @@ namespace Infrastructure.Services
 
             return user;
         }
+
+        public async Task<int> DeleteUser(ApplicationUser user)
+        {
+            var result = await _users.DeleteAsync(user);
+
+            if (result.Succeeded) return 1;
+            return 0;
+        }
     }
 }
