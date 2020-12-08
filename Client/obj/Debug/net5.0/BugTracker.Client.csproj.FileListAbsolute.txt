@@ -728,3 +728,5 @@ C:\Code\Blazor\BugTracker\Client\obj\Debug\net5.0\ref\BugTracker.Client.dll
 C:\Code\Blazor\BugTracker\Client\obj\Debug\net5.0\BugTracker.Client.pdb
 C:\Code\Blazor\BugTracker\Client\obj\Debug\net5.0\RazorDeclaration\Pages\Users.razor.g.cs
 C:\Code\Blazor\BugTracker\Client\obj\Debug\net5.0\Razor\Pages\Users.razor.g.cs
+C:\Code\Blazor\BugTracker\Client\obj\Debug\net5.0\RazorDeclaration\Pages\Profile.razor.g.cs
+C:\Code\Blazor\BugTracker\Client\obj\Debug\net5.0\Razor\Pages\Profile.razor.g.cs
