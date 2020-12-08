@@ -2,23 +2,29 @@
 using System.Collections.Generic;
 using System.Runtime.Serialization;
 using BugTracker.Shared.Models;
+using Elasticsearch.Net;
+using Nest;
 
 namespace Core.Models.Bugs
 {
+    [ElasticsearchType(RelationName = "Bug", IdProperty = nameof(Id))]
     public class BugEntity : DependencyEntity
     {
+        [Text(Boost = 1.5)]
         public string Bug { get; set; }
 
         public string Details { get; set; }
 
         public DateTime BugReportedTime { get; set; } = DateTime.Now;
 
+        [StringEnum]
         public Status Status { get; set; } = Status.Open;
 
         public List<ApplicationUser> User { get; set; }
 
         public DateTime Deadline { get; set; }
 
+        [StringEnum]
         public Priority Priority { get; set; } = Priority.Low;
 
         public List<SubTask> SubTasks { get; set; }

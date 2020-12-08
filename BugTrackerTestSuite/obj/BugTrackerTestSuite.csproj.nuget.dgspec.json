@@ -14,7 +14,7 @@
         "outputPath": "C:\\Code\\Blazor\\BugTracker\\BugTrackerTestSuite\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\"
+          "C:\\Microsoft\\Xamarin\\NuGet"
         ],
         "configFilePaths": [
           "C:\\Users\\jthur\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -22,18 +22,20 @@
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net5.0"
+          "net50"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net5.0": {
-            "targetAlias": "net5.0",
+          "netcoreapp5.0": {
             "projectReferences": {
               "C:\\Code\\Blazor\\BugTracker\\Client\\BugTracker.Client.csproj": {
                 "projectPath": "C:\\Code\\Blazor\\BugTracker\\Client\\BugTracker.Client.csproj"
+              },
+              "C:\\Code\\Blazor\\BugTracker\\Core\\Core.csproj": {
+                "projectPath": "C:\\Code\\Blazor\\BugTracker\\Core\\Core.csproj"
               },
               "C:\\Code\\Blazor\\BugTracker\\Infrastructure\\Infrastructure.csproj": {
                 "projectPath": "C:\\Code\\Blazor\\BugTracker\\Infrastructure\\Infrastructure.csproj"
@@ -51,8 +53,7 @@
         }
       },
       "frameworks": {
-        "net5.0": {
-          "targetAlias": "net5.0",
+        "netcoreapp5.0": {
           "dependencies": {
             "FluentAssertions": {
               "target": "Package",
@@ -114,6 +115,9 @@
           "assetTargetFallback": true,
           "warn": true,
           "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
@@ -132,7 +136,7 @@
         "outputPath": "C:\\Code\\Blazor\\BugTracker\\Client\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\"
+          "C:\\Microsoft\\Xamarin\\NuGet"
         ],
         "configFilePaths": [
           "C:\\Users\\jthur\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -140,15 +144,14 @@
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net5.0"
+          "net50"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net5.0": {
-            "targetAlias": "net5.0",
+          "netcoreapp5.0": {
             "projectReferences": {
               "C:\\Code\\Blazor\\BugTracker\\Shared\\BugTracker.Shared.csproj": {
                 "projectPath": "C:\\Code\\Blazor\\BugTracker\\Shared\\BugTracker.Shared.csproj"
@@ -163,8 +166,7 @@
         }
       },
       "frameworks": {
-        "net5.0": {
-          "targetAlias": "net5.0",
+        "netcoreapp5.0": {
           "dependencies": {
             "AntDesign": {
               "target": "Package",
@@ -240,7 +242,7 @@
         "outputPath": "C:\\Code\\Blazor\\BugTracker\\Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\"
+          "C:\\Microsoft\\Xamarin\\NuGet"
         ],
         "configFilePaths": [
           "C:\\Users\\jthur\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -248,15 +250,14 @@
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net5.0"
+          "net50"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net5.0": {
-            "targetAlias": "net5.0",
+          "netcoreapp5.0": {
             "projectReferences": {
               "C:\\Code\\Blazor\\BugTracker\\Shared\\BugTracker.Shared.csproj": {
                 "projectPath": "C:\\Code\\Blazor\\BugTracker\\Shared\\BugTracker.Shared.csproj"
@@ -271,8 +272,7 @@
         }
       },
       "frameworks": {
-        "net5.0": {
-          "targetAlias": "net5.0",
+        "netcoreapp5.0": {
           "dependencies": {
             "Microsoft.AspNetCore.ApiAuthorization.IdentityServer": {
               "target": "Package",
@@ -342,6 +342,9 @@
           "assetTargetFallback": true,
           "warn": true,
           "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
@@ -360,7 +363,7 @@
         "outputPath": "C:\\Code\\Blazor\\BugTracker\\Server\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\"
+          "C:\\Microsoft\\Xamarin\\NuGet"
         ],
         "configFilePaths": [
           "C:\\Users\\jthur\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -368,15 +371,14 @@
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net5.0"
+          "net50"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net5.0": {
-            "targetAlias": "net5.0",
+          "netcoreapp5.0": {
             "projectReferences": {
               "C:\\Code\\Blazor\\BugTracker\\Client\\BugTracker.Client.csproj": {
                 "projectPath": "C:\\Code\\Blazor\\BugTracker\\Client\\BugTracker.Client.csproj"
@@ -397,8 +399,7 @@
         }
       },
       "frameworks": {
-        "net5.0": {
-          "targetAlias": "net5.0",
+        "netcoreapp5.0": {
           "dependencies": {
             "AutoMapper.Extensions.Microsoft.DependencyInjection": {
               "target": "Package",
@@ -509,7 +510,7 @@
         "outputPath": "C:\\Code\\Blazor\\BugTracker\\Shared\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\"
+          "C:\\Microsoft\\Xamarin\\NuGet"
         ],
         "configFilePaths": [
           "C:\\Users\\jthur\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -517,15 +518,14 @@
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net5.0"
+          "net50"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net5.0": {
-            "targetAlias": "net5.0",
+          "netcoreapp5.0": {
             "projectReferences": {}
           }
         },
@@ -536,8 +536,7 @@
         }
       },
       "frameworks": {
-        "net5.0": {
-          "targetAlias": "net5.0",
+        "netcoreapp5.0": {
           "dependencies": {
             "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
               "target": "Package",

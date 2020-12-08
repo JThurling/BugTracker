@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Core.Interfaces.Services;
@@ -6,6 +7,8 @@ using Core.Models.Bugs;
 using Core.Models.Inputs.Bug;
 using Infrastructure.Data;
 using Microsoft.EntityFrameworkCore;
+using Nest;
+using Serilog.Core;
 
 namespace Infrastructure.Services
 {
@@ -13,9 +16,12 @@ namespace Infrastructure.Services
     {
         private readonly ApplicationDbContext _context;
 
-        public BugService(ApplicationDbContext context)
+        private readonly IElasticClient _elasticClient;
+
+        public BugService(ApplicationDbContext context , IElasticClient elasticClient)
         {
             _context = context;
+            _elasticClient = elasticClient;
         }
 
 
@@ -26,6 +32,14 @@ namespace Infrastructure.Services
             _context.Bugs.Add(input);
 
             var result = await _context.SaveChangesAsync();
+
+            var insertBug = await _elasticClient.IndexDocumentAsync(input);
+
+            if (!insertBug.IsValid)
+            {
+                var errorMsg = "Problem inserting document to Elasticsearch.";
+                throw new Exception(errorMsg);
+            }
 
             if (result <= 0) return 0;
 
