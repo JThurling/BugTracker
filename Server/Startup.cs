@@ -63,6 +63,9 @@ namespace BugTracker.Server
                     "application/octet-stream"
                 });
             });
+
+            services.AddElasticsearch(Configuration);
+
             services.AddRazorPages();
             services.AddScoped<ILogging, Logging>();
             services.ConfigureAppServices();
