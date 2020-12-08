@@ -80,6 +80,10 @@
               "target": "Package",
               "version": "[5.0.0, )"
             },
+            "NEST": {
+              "target": "Package",
+              "version": "[7.10.1, )"
+            },
             "NLog": {
               "target": "Package",
               "version": "[4.7.5, )"
@@ -163,6 +167,10 @@
             "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
               "target": "Package",
               "version": "[5.0.0, )"
+            },
+            "NEST": {
+              "target": "Package",
+              "version": "[7.10.1, )"
             },
             "Newtonsoft.Json": {
               "target": "Package",

@@ -730,3 +730,9 @@ C:\Code\Blazor\BugTracker\Client\obj\Debug\net5.0\RazorDeclaration\Pages\Users.r
 C:\Code\Blazor\BugTracker\Client\obj\Debug\net5.0\Razor\Pages\Users.razor.g.cs
 C:\Code\Blazor\BugTracker\Client\obj\Debug\net5.0\RazorDeclaration\Pages\Profile.razor.g.cs
 C:\Code\Blazor\BugTracker\Client\obj\Debug\net5.0\Razor\Pages\Profile.razor.g.cs
+C:\Code\Blazor\BugTracker\Client\bin\Debug\net5.0\wwwroot\_framework\Elasticsearch.Net.dll.gz
+C:\Code\Blazor\BugTracker\Client\bin\Debug\net5.0\wwwroot\_framework\Nest.dll.gz
+C:\Code\Blazor\BugTracker\Client\bin\Debug\net5.0\wwwroot\_framework\Elasticsearch.Net.dll
+C:\Code\Blazor\BugTracker\Client\bin\Debug\net5.0\wwwroot\_framework\Nest.dll
+C:\Code\Blazor\BugTracker\Client\obj\Debug\net5.0\build-gz\g32TgYEU.gz
+C:\Code\Blazor\BugTracker\Client\obj\Debug\net5.0\build-gz\iEyouC7l.gz

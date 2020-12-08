@@ -9,6 +9,7 @@
     "assembly": {
       "AntDesign.dll": "sha256-xl4QkKLUNpbqWf4jkK2ofbfvwZy0HAg6S2dXVB9qm2A=",
       "Blazored.TextEditor.dll": "sha256-p6KpADdpScfksgGgA5pIqZ21ViYtQxWPLg7FZrtbNB0=",
+      "Elasticsearch.Net.dll": "sha256-TDz4JJUMc6lwpKCs0Q9Nvd224VQAKZe2Wf5mXNhJ8bU=",
       "Microsoft.AspNetCore.Authorization.dll": "sha256-7P3zpzQg+C+ukPy7fBNY8UW+Ro+yLdvnT6d4iP13FuE=",
       "Microsoft.AspNetCore.Components.dll": "sha256-DcQM9qPOeEovJp5noXBIvP95Jd0SlaW6509d3Ml6xQ4=",
       "Microsoft.AspNetCore.Components.Authorization.dll": "sha256-RETzcaqJB7uXmSqtgbNeKNNc5YC\/Ux+Ud\/XI\/\/VCR38=",
@@ -53,6 +54,7 @@
       "Microsoft.Extensions.Primitives.dll": "sha256-f2PgoftqEkKRuuiAk6S1MHygOuqZBHzB0HOB3vR93TU=",
       "Microsoft.JSInterop.dll": "sha256-0o\/vt4NH\/VfmWZxWcdLsy7WlafnyiNlCMmFoL1QmfMg=",
       "Microsoft.JSInterop.WebAssembly.dll": "sha256-5AkXTXHIeXryrSr97JWjBrndsRjoslMVJ8e7FqupHUw=",
+      "Nest.dll": "sha256-Puf0IaiuqV8\/Wac2a6uTSz2PL1GujAMdoZAOamhnWm8=",
       "Newtonsoft.Json.dll": "sha256-mRd6TL4DYldo1ko9czkjEDcoiPdMPrJxz3dekwV6OOY=",
       "OneOf.dll": "sha256-K99lDyL6VrtTDYGRk5o+Q3caW25Uogee\/1e7aIvpgLY=",
       "Serilog.dll": "sha256-2wpMSiGhugk30cIglcKwcCQi79THpBqqV3YIKIouafw=",
@@ -224,13 +226,13 @@
       "mscorlib.dll": "sha256-i0zXLOX1XZekwNvRdQK9WDvRWKFggLp7KDCnvMrn+HQ=",
       "netstandard.dll": "sha256-4QNBIB4DMwj82CYd96oFrTh3fcrmyaDjtQ2dBTyWz7Q=",
       "System.Private.CoreLib.dll": "sha256-5Zk+rN+j5FbFEQJdT8YR2O0i6KWpvrERsaPZCv69DmI=",
-      "BugTracker.Shared.dll": "sha256-T5YlVIXvewcUZdkSkiGVq4h08\/LH6V13eIVmTo2WnnE=",
-      "BugTracker.Client.dll": "sha256-U7yoIexKQcwg0WyHvw4xYLvv5CoLGATIG7\/h6oPyx00="
+      "BugTracker.Shared.dll": "sha256-vEwCP1LXrxNE2+JjdHXgRlm4uhpqWkG1UmcEvMqwlnQ=",
+      "BugTracker.Client.dll": "sha256-Ag94mGl++1RZt81hx\/Uw9XtJcN73JBrWSITrEl2G6qQ="
     },
     "lazyAssembly": null,
     "pdb": {
-      "BugTracker.Shared.pdb": "sha256-CovNuwTr6ticzpDihQcM\/0glDQMytybm2lnnOabzdCs=",
-      "BugTracker.Client.pdb": "sha256-5zZW\/W9U5\/EeNO+8GH+Te6moKew+YQTEeDTuAMv8cuM="
+      "BugTracker.Shared.pdb": "sha256-V3yzTcuiPLg4dj\/zzMCstWdl8gMVBkYNOxvH+SEXIyQ=",
+      "BugTracker.Client.pdb": "sha256-R\/5zGZRuCiEc+wAHKM5PQIZUT5r3NtqB2A7n0pyDtvc="
     },
     "runtime": {
       "dotnet.timezones.blat": "sha256-2ldEe2K8ARFKSIBsv+Hr3iNQzq9qh1H\/dwdu2r+AIyY=",

@@ -258,3 +258,5 @@ C:\Code\Blazor\BugTracker\Server\obj\Debug\net5.0\BugTracker.Server.dll
 C:\Code\Blazor\BugTracker\Server\obj\Debug\net5.0\ref\BugTracker.Server.dll
 C:\Code\Blazor\BugTracker\Server\obj\Debug\net5.0\BugTracker.Server.pdb
 C:\Code\Blazor\BugTracker\Server\obj\Debug\net5.0\BugTracker.Server.genruntimeconfig.cache
+C:\Code\Blazor\BugTracker\Server\bin\Debug\net5.0\Elasticsearch.Net.dll
+C:\Code\Blazor\BugTracker\Server\bin\Debug\net5.0\Nest.dll
